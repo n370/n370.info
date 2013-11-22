@@ -1,19 +1,22 @@
+h1 {
+}
 body {
 	margin: 0;
 }
-
 nav {
 	background-color: gray;
-	width: 15%;
-	float:left;
+	width: 280px;
+	height: 1000px;
 }
-
 section {
 	background-color: silver;
-	width: 5%;
+	height: 100%;
+	margin-left: 280px;
 }
-
 header {
 	background-color: black;
 	height: 10px;
+	width: 100%;
+	position: fixed;
+	top: 0;
 }
