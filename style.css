@@ -2,13 +2,13 @@ body {
 	margin: 0;
 }
 
-aside {
+nav {
 	background-color: gray;
 	width: 15%;
 	float:left;
 }
 
-article {
+section {
 	background-color: silver;
 	width: 5%;
 }
