@@ -5,3 +5,4 @@ var paper = Raphael(0, 0, 320, 200);
 var circle = paper.circle(200, 100, 10);
 // Sets the fill attribute of the circle to red (#f00)
 circle.attr("fill", "black");
+
