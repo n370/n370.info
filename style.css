@@ -2,11 +2,13 @@ body {
   background: rgba(236,236,236,1);
 }
 
+#front {
+  width: 100%;
+}
+
 #header {
-  background: url("front.jpg");
-  background-position: center;
-  background-size: 100% auto;
-  height: 800px;
+  margin: 0;
+  padding: 0;
 }
 
 #social, #footer {
