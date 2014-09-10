@@ -1,16 +1,187 @@
 body {
   background: rgba(236,236,236,1);
-}
-
-#front {
-  width: 100%;
-}
-
-#header {
   margin: 0;
-  padding: 0;
 }
 
-#social, #footer {
-  padding-top: 20px;
+p {
+  font-family: 'Bitter', serif;
+  font-weight: 400;
+  font-size: 1.7vw;
+  line-height: 2.5vw;
+}
+
+h1, h2, h3 {
+  font-family: 'Bree Serif', serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 6.5vw;
+  line-height: 7vw;
+}
+
+h2 {
+  font-size: 4vw;
+  line-height: 4.5vw;
+}
+
+h3 {
+  font-size: 2vw;
+  line-height: 4.5vw;
+}
+
+.grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; /* or inline-flex */
+}
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.grid-cell {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.grid-cell-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+
+.grid-cell--center {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+
+img {
+  width:100%;
+}
+
+.top-layer {
+  z-index: 1;
+}
+
+.bottom-layer {
+  z-index: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+#footer {
+  margin-top: 10em;
+  height: 15em;
+  background: #333;
+}
+
+
+#hello {
+  top: 15vw;
+  width: 40vw;
+  margin-left: 5vw;
+}
+
+.green-text {
+  color: #339966;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+#photo-credits {
+  right: -1vw;
+  top: 68vw;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+#photo-credits a {
+  font-family: 'Bree Serif', serif;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  height: 7vw;
+  font-family: 'Bree Serif', serif;
+  font-weight: 400;
+  font-size: 2vw;
+  background: #333333;
+}
+
+.white-text, #footer a {
+  color: white;
+}
+
+.h-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.v-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.to-the-end {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#summary img, #education img {
+  width: 16vw;
+  margin: 0 3vw 3vw 3vw;
+}
+
+#summary, #education {
+  padding: 3em 0;
+  margin: 0 5vw;
+}
+
+#education h2 {
+  margin-left: calc(100%/3);
+}
+
+#social {
+  padding-bottom: 5vw;
+  margin: 0 5vw;
+  font-size: 3vw;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
