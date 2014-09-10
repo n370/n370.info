@@ -1,6 +1,7 @@
 body {
-  background: rgba(236,236,236,1);
+  background: white;
   margin: 0;
+  font-weight: 400;
 }
 
 p {
@@ -8,6 +9,7 @@ p {
   font-weight: 400;
   font-size: 1.7vw;
   line-height: 2.5vw;
+  margin: 4vw 0;
 }
 
 h1, h2, h3 {
@@ -23,11 +25,20 @@ h1 {
 h2 {
   font-size: 4vw;
   line-height: 4.5vw;
+  margin: 2vw 0;
 }
 
 h3 {
+  font-size: 2.5vw;
+}
+
+h4 {
   font-size: 2vw;
   line-height: 4.5vw;
+}
+
+small {
+  font-size: 1.5vw;
 }
 
 .grid {
@@ -98,7 +109,7 @@ img {
 
 
 #hello {
-  top: 15vw;
+  top: 8vw;
   width: 40vw;
   margin-left: 5vw;
 }
@@ -115,30 +126,37 @@ img {
   position: relative;
 }
 
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 #photo-credits {
   right: -1vw;
-  top: 68vw;
+  bottom: 8vw;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-#photo-credits a {
+a {
   font-family: 'Bree Serif', serif;
   font-weight: 400;
-  color: white;
   text-decoration: none;
+  color: white;
 }
 
 nav {
   height: 7vw;
-  font-family: 'Bree Serif', serif;
-  font-weight: 400;
-  font-size: 2vw;
   background: #333333;
 }
 
-.white-text, #footer a {
+nav h3 {
+  margin-top: 1.5vw;
+}
+
+.white-text {
   color: white;
 }
 
@@ -164,8 +182,8 @@ nav {
 }
 
 #summary img, #education img {
-  width: 16vw;
-  margin: 0 3vw 3vw 3vw;
+  width: 20vw;
+  margin: 0 0 5vw 0;
 }
 
 #summary, #education {
@@ -184,4 +202,12 @@ nav {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+}
+
+.active {
+  border-bottom: 0.8vw solid #ff9966;
+}
+
+.hidden {
+  display: none;
 }
