@@ -78,7 +78,6 @@ small {
           flex: 2;
 }
 
-
 .grid-cell--center {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
@@ -103,10 +102,8 @@ img {
 
 #footer {
   margin-top: 10em;
-  height: 15em;
   background: #333;
 }
-
 
 #hello {
   top: 7vw;
@@ -133,11 +130,15 @@ img {
 }
 
 #photo-credits {
-  right: -1vw;
-  bottom: 8vw;
+  right: 0;
+  top: 65vw;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+#photo-credits a {
+  color: #444;
 }
 
 a {
@@ -205,7 +206,7 @@ nav > div:hover {
 }
 
 #social {
-  padding-bottom: 5vw;
+  padding-bottom: 2em;
   margin: 0 5vw;
   font-size: 3vw;
   -webkit-justify-content: space-around;

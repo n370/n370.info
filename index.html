@@ -12,21 +12,19 @@
 </head>
 <body>
   <div class="grid column">
-    <div class="grid-cell">
-      <div class='relative'>
-        <img src='photo.jpg'/>
-        <h1 id='hello' class='top-layer absolute green-text'>I’m a brazilian seeking out disconfort</br>in Argentina.</h1>
-        <small id='photo-credits' class='absolute'><a href='http://filipefoto.com/'>filipefoto.com</a></small>
-      </div>
+    <div id='front'>
+      <img src='photo.jpg'/>
+      <small id='photo-credits' class='absolute top-layer'><a href='http://filipefoto.com/'>filipefoto.com</a></small>
+      <h1 id='hello' class='top-layer absolute green-text'>I’m a brazilian seeking out disconfort</br>in Argentina.</h1>
     </div>
-    <div class="grid-cell">
+    <div id='navigation'>
       <nav class='grid row top-layer'>
         <div class='grid-cell grid row h-center white-text'><h3>CV/Work</h3></div>
         <div class='grid-cell grid row h-center white-text active'><h3>Biography</h3></div>
       </nav>
     </div>
     <div id='work' class='hidden'>WORK</div>
-    <div id='biography' class="grid-cell">
+    <div id='biography'>
       <div id='summary' class='grid column'>
         <div class='grid-cell'>
           <h2 class='green-text'>Summary</h2>
@@ -75,7 +73,7 @@
         </div>
       </div>
     </div>
-    <div id="footer" class='grid-cell grid column'>
+    <div id="footer" class='grid column'>
       <div class='green-text grid h-center'>
         <h4>Find me online somewhere, I'm social!</h4>
       </div>
@@ -104,6 +102,5 @@
       </div>
     </div>
   </div>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>
