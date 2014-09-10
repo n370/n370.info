@@ -86,6 +86,15 @@ small {
 
 img {
   width:100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+#front {
+  margin: 0;
+  border: none;
+  padding: 0;
 }
 
 .top-layer {
