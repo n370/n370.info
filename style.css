@@ -149,12 +149,16 @@ a {
 
 nav {
   height: 7vw;
-  background: #333333;
+  background: #333;
   cursor: pointer;
 }
 
 nav h3 {
   margin-top: 1.5vw;
+}
+
+nav > div:hover {
+  background: #444;
 }
 
 .white-text {
