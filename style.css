@@ -161,6 +161,10 @@ nav > div:hover {
   background: #444;
 }
 
+#nav-placeholder {
+  height: 7vw;
+}
+
 .white-text {
   color: white;
 }
