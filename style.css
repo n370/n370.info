@@ -109,7 +109,7 @@ img {
 
 
 #hello {
-  top: 8vw;
+  top: 7vw;
   width: 40vw;
   margin-left: 5vw;
 }
@@ -150,6 +150,7 @@ a {
 nav {
   height: 7vw;
   background: #333333;
+  cursor: pointer;
 }
 
 nav h3 {
