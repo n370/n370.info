@@ -3,17 +3,15 @@ var buttons = nav[0].children;
 var rect = nav[0].getBoundingClientRect();
 var bio = document.getElementById('biography');
 var work = document.getElementById('work');
-var navPlaceholder = document.createElement('div');
-navPlaceholder.setAttribute('id', 'nav-placeholder');
 var initialOffset = nav[0].offsetTop;
 
 function stickIt() {
   if (initialOffset <= window.scrollY) {
     nav[0].classList.add('fixed');
-    document.body.children[0].children[1].appendChild(navPlaceholder);
+    bio.children[0].classList.add('nav-space-placeholder');
   } else {
     nav[0].classList.remove('fixed');
-    navPlaceholder.remove();
+    bio.children[0].classList.remove('nav-space-placeholder');
   }
 }
 
