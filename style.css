@@ -18,8 +18,8 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 6.5vw;
-  line-height: 7vw;
+  font-size: 6.7vw;
+  line-height: 6.8vw;
 }
 
 h2 {
@@ -206,7 +206,7 @@ nav > div:hover {
   margin: 0 0 5vw 0;
 }
 
-#summary, #education {
+#summary, #education, #timeline {
   padding: 3em 0;
   margin-left: 5vw;
   margin-right: 5vw;
@@ -231,4 +231,8 @@ nav > div:hover {
 
 .hidden {
   display: none;
+}
+
+#timeline h2 {
+  text-align: center;
 }

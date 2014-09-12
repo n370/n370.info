@@ -9,9 +9,11 @@ function stickIt() {
   if (initialOffset <= window.scrollY) {
     nav[0].classList.add('fixed');
     bio.children[0].classList.add('nav-space-placeholder');
+    //work.children[0].classList.add('nav-space-placeholder');
   } else {
     nav[0].classList.remove('fixed');
     bio.children[0].classList.remove('nav-space-placeholder');
+    //work.children[0].classList.add('nav-space-placeholder');
   }
 }
 
