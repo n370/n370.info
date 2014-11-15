@@ -125,6 +125,10 @@ img {
   color: #339966;
 }
 
+#hello img {
+  width: 200px;
+}
+
 .absolute {
   position: absolute;
 }
