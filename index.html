@@ -1,41 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>|\|370</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="p:domain_verify" content="c35f4a3ff9f84cc23df833202f6a8cc5"/>
+---
+layout: default
+---
 
-  <!-- http://www.freefavicon.com/freefavicons/network/iconinfo/iconhost-152-17065.html -->
-  <link rel="icon" type="image/x-icon" href="iconhost-17065/favicon.ico" />
+<div class="home">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-  <link rel='stylesheet' type='text/css'href='http://fonts.googleapis.com/css?family=Bree+Serif|Bitter'>
-  <link rel='stylesheet' type='text/css' href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-  <link rel='stylesheet' type='text/css' href="style.css">
-</head>
-<body>
-  <!-- Google Tag Manager -->
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KXTGFL"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KXTGFL');</script>
-  <!-- End Google Tag Manager -->
+  <h1 class="page-heading">Posts</h1>
 
-  <div class="grid column cv-main">
-    <div class="grid row">
-      <div class="grid column">
-        <h1 class="no-margin">n370.info</h1>
-      </div>
-    </div>
-    <div class="grid row">
-      <div class="grid-cell-1-of-n"></div>
-      <div class="grid-cell-2-of-n"></div>
-    </div>
-  </div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <script src="script.js"></script>
-</body>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

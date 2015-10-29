@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KXTGFL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KXTGFL');</script>
+    <!-- End Google Tag Manager -->
+
+    {% include header.html %}
+
+    <div class="grid column cv-main">
+      <div class="grid row">
+        <div class="grid column">
+          <h1 class="no-margin">n370.info</h1>
+        </div>
+      </div>
+      <div class="grid row">
+        <div class="grid column">
+          <div class="page-content">
+            <div class="wrapper">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid row">
+        <div class="grid-cell-1-of-n"></div>
+        <div class="grid-cell-2-of-n"></div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+</html>
