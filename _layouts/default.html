@@ -4,6 +4,16 @@
   {% include head.html %}
 
   <body>
+
+    {% include header.html %}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script src="{{ "/js/script.js" | prepend: site.baseurl }}" charset="utf-8"></script>
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KXTGFL"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -13,14 +23,5 @@
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KXTGFL');</script>
     <!-- End Google Tag Manager -->
-
-    {% include header.html %}
-
-    <main>
-      {{ content }}
-    </main>
-
-    {% include footer.html %}
-    <script src="{{ "/js/script.js" | prepend: site.baseurl }}" charset="utf-8"></script>
   </body>
 </html>

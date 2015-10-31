@@ -1,7 +1,18 @@
+# |\|370
 *.psd
+*.sketch
+
+# Apple
 .DS_Store
-_site
+
+# SASS
 .sass-cache
+
+# Jekyll
+_site
+_drafts
 .jekyll-metadata
+
+# RVM
 .ruby-gemset
 .ruby-version
