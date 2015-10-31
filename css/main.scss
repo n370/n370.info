@@ -74,11 +74,10 @@ main {
   }
 
   article {
-    img {
-      display: inline;
-      height: 50px;
-      padding: 0 10px;
-    }
+      img {
+        @include fill-parent();
+        padding: 25px 0;
+      }
   }
 }
 
