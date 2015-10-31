@@ -2,7 +2,7 @@
 layout: post
 title: "Life and education"
 date: "2014-10-31"
-categories: en
+categories: english
 ---
 ## Summary
 
