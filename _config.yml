@@ -17,4 +17,3 @@ github_username:  n370
 
 # Build settings
 markdown: kramdown
-gems: [bourbon, neat]
