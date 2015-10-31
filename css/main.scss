@@ -50,16 +50,6 @@ $on-laptop:        800px;
         "syntax-highlighting"
 ;
 
-main {
-  @include outer-container(100%);
-  @include span-columns(12);
-  @include pad();
-
-  @include media(960px) {
-    @include span-columns(6);
-  }
-}
-
 body {
   background: $background-color;
   > header {
@@ -71,6 +61,24 @@ body {
     border-bottom: 1px solid darken($background-color, 20%);
     z-index: 100;
     top: 0;
+  }
+}
+
+main {
+  @include outer-container(100%);
+  @include span-columns(12);
+  @include pad();
+
+  @include media(960px) {
+    @include span-columns(5);
+  }
+
+  article {
+    img {
+      display: inline;
+      height: 50px;
+      padding: 0 10px;
+    }
   }
 }
 
