@@ -3,8 +3,6 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -14,9 +12,9 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       rgb(250, 251, 254);
-$background-color: rgb(93, 97, 94);
-$brand-color:      rgb(240, 193, 113);
+$text-color:       rgb(0, 0, 0);
+$background-color: rgb(240, 242, 242);
+$brand-color:      rgb(244, 18, 18);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -43,12 +41,46 @@ $on-laptop:        800px;
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "bourbon",
+        "neat",
+        "bitters/base",
         "base",
-        "layout",
-        "syntax-highlighting",
-        "legacy"
+        "syntax-highlighting"
 ;
+
+main {
+  @include outer-container(100%);
+  @include span-columns(12);
+  @include pad();
+
+  @include media(960px) {
+    @include span-columns(6);
+  }
+}
+
+body {
+  background: $background-color;
+  > header {
+    @include pad();
+    @include row();
+    @include fill-parent();
+    position: fixed;
+    background: inherit;
+    border-bottom: 1px solid darken($background-color, 20%);
+    z-index: 100;
+    top: 0;
+  }
+}
+
+footer {
+  @include pad();
+  @include row();
+  @include fill-parent();
+  position: fixed;
+  background: inherit;
+  z-index: 100;
+  bottom: 0;
+  border-top: 1px solid darken($background-color, 20%);
+}

@@ -21,3 +21,7 @@ gem 'jekyll-mentions', '0.2.1'
 gem 'jekyll-redirect-from', '0.8.0'
 gem 'jekyll-sitemap', '0.8.1'
 gem 'jekyll-feed', '0.3.1'
+
+gem 'bourbon', '4.2.6'
+gem 'neat', '1.7.2'
+gem 'bitters', '1.1.0'
