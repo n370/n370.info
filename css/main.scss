@@ -37,7 +37,7 @@ main {
   @include pad();
 
   @include media(960px) {
-    @include span-columns(5);
+    @include span-columns(6);
   }
 
   article {
