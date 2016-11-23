@@ -1,0 +1,120 @@
+---
+layout: post
+title: "Como criar uma simples aplicação usando React"
+date: "2016-11-23 18:19:19 -0200"
+---
+
+Se não estiver instalado, instale agora o [Node.js](https://nodejs.org/en/).
+
+Crie um novo diretório chamado ```simple-react-app```, vá para ele e execute o comando ```npm init -f``` para iniciar um novo projeto.
+
+Instale suas dependências ```npm install -S react react-dom```.
+
+Instale também alguns pacotes que você precisará para trabalhar com React: Babel, Webpack e Webpack Dev Server.
+
+{% highlight bash %}
+  npm install -g babel webpack webpack-dev-server
+  npm install -D babel-loader babel-core babel-preset-es2015 babel-preset-react
+{% endhighlight %}
+
+Seu projeto ainda precisará de mais alguns arquivos ```touch index.html App.js main.js webpack.config.js```.
+
+Abra no seu editor de texto o arquivo ```./webpack.config.js``` que você acabou de criar no diretório raiz do projeto e escreva o seguinte:
+
+{% highlight javascript %}
+  module.exports = {
+    entry: './main.js',
+    output: {
+      path: './',
+      filename: 'index.js'
+    },
+    devServer: {
+      inline: true,
+      port: 1337
+    },
+    module: {
+      loaders: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'babel',
+          query: {
+            presets: ['es2015', 'react']
+          }
+        }
+      ]
+    }  
+  }
+{% endhighlight %}
+
+Abra também o arquivo ```./index.js``` e complete assim:
+
+{% highlight html %}
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Simples</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+  </html>
+{% endhighlight %}
+
+Preencha ainda os arquivos ```./App.js``` e ```./main.js``` respectivamente com:
+
+{% highlight javascript %}
+  import React from 'react';
+
+  class App extends React.Component {
+    render(){
+      return <div>Essa foi fácil</div>
+    }
+  }
+
+  export default App;
+{% endhighlight %}
+
+{% highlight javascript %}
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import App from './App';
+
+  ReactDOM.render(<App />, document.getElementById('app'));
+{% endhighlight %}
+
+Finalmente edite seu ```./package.json``` para que tenha um _start script_.
+
+{% highlight json %}
+  {
+    "name": "es6-react-setup",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "webpack-dev-server ### Esta linha foi adicionada."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "react": "^15.4.1",
+      "react-dom": "^15.4.1"
+    },
+    "devDependencies": {
+      "babel-core": "^6.18.2",
+      "babel-loader": "^6.2.8",
+      "babel-preset-es2015": "^6.18.0",
+      "babel-preset-react": "^6.16.0"
+    }
+  }
+{% endhighlight %}
+
+Volte para sua linha de comando e execute ```npm start```. Parabéns! sua aplicação deverá estar funcionando em http://localhost:1337/.
+
+Experimente editar o arquivo ```./App.js``` para que se visualize o texto "Estou gostando!" em vez "Essa foi fácil!". Sua aplicação deverá ser automaticamente atualizada no momento em que você salvar as suas modificações.
+
+Legal, não é? deixe qualquer dúvida ou sugestão abaixo nos comentários ou envie sua mensagem direto pro meu e-mail [ama@n370.info](mailto:ama@n370.info). Obrigado!
