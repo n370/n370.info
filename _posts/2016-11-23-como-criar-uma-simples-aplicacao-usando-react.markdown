@@ -115,6 +115,6 @@ Finalmente edite seu ```./package.json``` para que tenha um _start script_.
 
 Volte para sua linha de comando e execute ```npm start```. Parabéns! sua aplicação deverá estar funcionando em http://localhost:1337/.
 
-Experimente editar o arquivo ```./App.js``` para que se visualize o texto "Estou gostando!" em vez "Essa foi fácil!". Sua aplicação deverá ser automaticamente atualizada no momento em que você salvar as suas modificações.
+Experimente editar o arquivo ```./App.js``` para que se visualize o texto "Estou gostando!" em vez "Essa foi fácil!". Sua aplicação deverá ser automaticamente atualizada no momento em que você salvar suas modificações.
 
-Legal, não é? deixe qualquer dúvida ou sugestão abaixo nos comentários ou envie sua mensagem direto pro meu e-mail [ama@n370.info](mailto:ama@n370.info). Obrigado!
+Legal, não é? deixe qualquer dúvida ou sugestão abaixo nos comentários ou envie sua mensagem direto para o meu e-mail. Obrigado!
