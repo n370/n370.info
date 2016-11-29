@@ -8,8 +8,7 @@
 # Site settings
 title: n370.info
 email: ama@n370.info
-description: > # this means to ignore newlines until "baseurl:"
-  Trouble maker, problem solver.
+description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://n370.info" # the base hostname & protocol for your site
 twitter_username: n370n370
