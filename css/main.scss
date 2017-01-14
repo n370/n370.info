@@ -37,7 +37,7 @@ main {
   @include pad();
 
   @include media(960px) {
-    @include span-columns(6);
+      @include span-columns(6);
   }
 
   article {
@@ -57,4 +57,8 @@ footer {
   z-index: 100;
   bottom: 0;
   border-top: 1px solid darken($background-color, 20%);
+}
+
+.post-list {
+  max-width: 420px;
 }
