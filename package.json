@@ -1,0 +1,26 @@
+{
+  "name": "n370.info",
+  "description": "|\\|370's Personal Blog",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "d3": "^4.13.0",
+    "gatsby": "^1.9.119",
+    "gatsby-link": "^1.6.28",
+    "gatsby-plugin-react-helmet": "^2.0.4",
+    "gatsby-plugin-styled-components": "^2.0.5",
+    "gatsby-remark-katex": "^1.0.10",
+    "gatsby-remark-prismjs": "^1.2.12",
+    "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-transformer-remark": "^1.7.27",
+    "katex": "^0.9.0-beta1",
+    "normalize.css": "^7.0.0",
+    "react-disqus-thread": "^0.4.0",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^3.1.6"
+  }
+}
