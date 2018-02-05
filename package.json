@@ -11,6 +11,7 @@
     "d3": "^4.13.0",
     "gatsby": "^1.9.119",
     "gatsby-link": "^1.6.28",
+    "gatsby-plugin-google-tagmanager": "^1.0.13",
     "gatsby-plugin-react-helmet": "^2.0.4",
     "gatsby-plugin-styled-components": "^2.0.5",
     "gatsby-remark-katex": "^1.0.10",
