@@ -2,6 +2,7 @@ import 'normalize.css/normalize.css';
 import '../styles/main.css';
 import React from "react";
 import Link from "gatsby-link";
+import { Helmet } from "react-helmet";
 import Wrapper from '../components/Wrapper';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -37,6 +38,9 @@ const ListLink = props => (
 
 export default ({ children, data }) => (
     <Wrapper>
+        <Helmet>
+            <link rel="shortcut icon" href="images/favicons/favicon.ico"/>
+        </Helmet>
         <Header>
             <Link to="/" style={styles.siteTitleLink}>
                 <h3 style={styles.siteTitle}>{data.site.siteMetadata.title}</h3>
