@@ -20,7 +20,6 @@
     "gatsby-transformer-remark": "^1.7.27",
     "katex": "^0.9.0-beta1",
     "normalize.css": "^7.0.0",
-    "react-disqus-thread": "^0.4.0",
     "react-helmet": "^5.2.0",
     "styled-components": "^3.1.6"
   }
