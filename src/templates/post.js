@@ -1,20 +1,10 @@
 import "katex/dist/katex.css";
 import "prismjs/themes/prism.css";
 import React from "react";
-import ReactDisqusThread from 'react-disqus-thread';
-import Wrapper from '../components/Wrapper';
+import Post from '../components/Post';
 
 export default ({ data }) => {
-  const post = data.markdownRemark;
-  return (
-    <Wrapper>
-      <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <ReactDisqusThread
-        shortname="n370"
-        identifier={post.frontmatter.title} />
-    </Wrapper>
-  );
+  return <Post postData={data.markdownRemark}/>;
 };
 
 export const query = graphql`

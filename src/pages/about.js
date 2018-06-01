@@ -1,4 +1,8 @@
 import React from "react"
-import Wrapper from '../components/Wrapper';
+import Main from '../components/Main';
 
-export default () => <Wrapper><h1>About</h1></Wrapper>;
+export default () => (
+    <Main>
+        <h1>About</h1>
+    </Main>
+);

@@ -1,3 +1,8 @@
 body {
-  background: #eee;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+a, a:visited {
+  color: inherit;
 }

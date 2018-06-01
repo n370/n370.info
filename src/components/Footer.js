@@ -1,10 +1,15 @@
 import React from "react";
 import styled from 'styled-components';
 
-export default styled.div`
+const UnstyledFooter = ({ className, siteMetadata }) => (
+  <small className={className}>{siteMetadata.title}</small>
+);
+
+export default styled(UnstyledFooter)`
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #eee;
-  padding: 20px 5px;
-`
+  padding: 20px 3%;
+  box-sizing: border-box;
+  text-align: right;
+`;
