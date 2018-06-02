@@ -13,8 +13,12 @@ export default ({ data, pathContext }) => {
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
       html
       frontmatter {
+        uuid
         title
       }
     }

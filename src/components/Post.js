@@ -10,15 +10,17 @@ class UnstyledPost extends React.Component {
 
   componentDidMount () {
     this.setupDisqs({
-      url: "https://n370.info/",
-      identifier: this.props.postData.frontmatter.title
+      title: this.props.postData.frontmatter.title,
+      url: `https://n370.info/${this.props.postData.fields.slug}`,
+      identifier: this.props.postData.frontmatter.uuid
     });
   }
 
-  setupDisqs ({ url, identifier }) {
+  setupDisqs ({ url, identifier, title }) {
     // RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
     // LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
     var disqus_config = function () {
+      this.page.title = title;
       this.page.url = url;  // Replace PAGE_URL with your page's canonical URL variable
       this.page.identifier = identifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
