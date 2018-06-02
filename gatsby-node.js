@@ -20,6 +20,22 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       {
         allMarkdownRemark {
           edges {
+            previous {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+            next {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
             node {
               fields {
                 slug
@@ -29,12 +45,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     `).then(result => {
-      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      result.data.allMarkdownRemark.edges.forEach(({ node, previous, next }) => {
         createPage({
           path: node.fields.slug,
           component: path.resolve('./src/templates/post.js'),
           context: {
-            slug: node.fields.slug
+            slug: node.fields.slug,
+            next,
+            previous
           }
         });
       });

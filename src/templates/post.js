@@ -3,8 +3,11 @@ import "prismjs/themes/prism.css";
 import React from "react";
 import Post from '../components/Post';
 
-export default ({ data }) => {
-  return <Post postData={data.markdownRemark}/>;
+export default ({ data, pathContext }) => {
+  return <Post
+      postData={data.markdownRemark}
+      next={pathContext.next}
+      previous={pathContext.previous} />;
 };
 
 export const query = graphql`

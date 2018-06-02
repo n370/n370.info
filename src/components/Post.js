@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "gatsby-link";
 import styled from 'styled-components';
 import Main from './Main';
 
@@ -30,11 +31,21 @@ class UnstyledPost extends React.Component {
 
   render () {
     const postData = this.props.postData;
+    const next = this.props.next;
+    const previous = this.props.previous;
     const className = this.props.className;
     return (
       <Main className={className}>
+          <div className="pagination">
+            <div>{previous && <Link to={previous.fields.slug}>Previous: {previous.frontmatter.title}</Link>}</div>
+            <div>{next && <Link to={next.fields.slug}>Next: {next.frontmatter.title}</Link>}</div>
+          </div>
           <h1>{postData.frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: postData.html }} />
+          <div className="markdown" dangerouslySetInnerHTML={{ __html: postData.html }} />
+          <div className="pagination">
+            <div>{previous && <Link to={previous.fields.slug}>Previous: {previous.frontmatter.title}</Link>}</div>
+            <div>{next && <Link to={next.fields.slug}>Next: {next.frontmatter.title}</Link>}</div>
+          </div>
           <div id="disqus_thread"></div>
       </Main>
     );
@@ -51,13 +62,10 @@ export default styled(UnstyledPost)`
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Viga', sans-serif;
   }
-  #disqus_thread, h1 {
-    margin: 50px 25%;
-  }
-  #disqus_thread {
-    margin-top: 150px;
-  }
-  > div > *:not(iframe) {
+  h1,
+  #disqus_thread,
+  .markdown > *:not(iframe),
+  .pagination {
     margin: 50px 25%;
   }
   > div > .gatsby-highlight {
@@ -66,6 +74,23 @@ export default styled(UnstyledPost)`
     box-shadow: 1px 2px 7px 0px #d5d5d5;
     pre {
       border-radius: inherit;
+    }
+  }
+  #disqus_thread {
+    margin-top: 150px;
+  }
+  .pagination {
+    margin: 0 25%;
+    display: flex;
+    > * {
+      flex-basis: 50%;
+    }
+    > *:first-child {
+      padding: 0 10% 0 0;
+    }
+    > *:last-child {
+      padding: 0 0 0 10%;
+      text-align: right;
     }
   }
 `;
