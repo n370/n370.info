@@ -38,10 +38,6 @@ class UnstyledPost extends React.Component {
     const className = this.props.className;
     return (
       <Main className={className}>
-          <div className="pagination">
-            <div>{previous && <Link to={previous.fields.slug}>Previous: {previous.frontmatter.title}</Link>}</div>
-            <div>{next && <Link to={next.fields.slug}>Next: {next.frontmatter.title}</Link>}</div>
-          </div>
           <h1>{postData.frontmatter.title}</h1>
           <div className="markdown" dangerouslySetInnerHTML={{ __html: postData.html }} />
           <div className="pagination">
