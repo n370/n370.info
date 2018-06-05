@@ -71,7 +71,7 @@ export default styled(UnstyledPost)`
     margin: 50px 25%;
   }
   > div > .gatsby-highlight {
-    margin: 50px 10%;
+    margin: 50px 20% 50px 20%;
     border-radius: 5px;
     box-shadow: 1px 2px 7px 0px #d5d5d5;
     pre {
