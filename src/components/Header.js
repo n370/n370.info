@@ -6,7 +6,6 @@ const UnstyledHeader = ({ className, siteMetadata }) => {
   return (
     <div className={className}>
       <Link to="/"><h3>{siteMetadata.title}</h3></Link>
-      <Link to="/about"><h4>about me</h4></Link>
     </div>
   )
 }
