@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import styled from 'styled-components';
 import Main from './Main';
+import Layout from "../layouts";
 
 class UnstyledPost extends React.Component {
   constructor (props) {
@@ -37,7 +38,8 @@ class UnstyledPost extends React.Component {
     const previous = this.props.previous;
     const className = this.props.className;
     return (
-      <Main className={className}>
+      <Layout>
+        <Main className={className}>
           <h1>{postData.frontmatter.title}</h1>
           <div className="markdown" dangerouslySetInnerHTML={{ __html: postData.html }} />
           <div className="pagination">
@@ -45,7 +47,8 @@ class UnstyledPost extends React.Component {
             <div>{next && <Link to={next.fields.slug}>Next: {next.frontmatter.title}</Link>}</div>
           </div>
           <div id="disqus_thread"></div>
-      </Main>
+        </Main>
+      </Layout>
     );
   }
 }

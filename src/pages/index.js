@@ -1,9 +1,13 @@
 import React from "react";
 import PostList from "../components/PostList";
+import Layout from "../layouts";
+import { graphql } from 'gatsby';
 
-export default ({data}) => {
-  return <PostList postList={data.allMarkdownRemark.edges} />;
-}
+export default ({data}) => (
+  <Layout>
+    <PostList postList={data.allMarkdownRemark.edges} />;
+  </Layout>
+);
 
 export const query = graphql`
   query IndexQuery {

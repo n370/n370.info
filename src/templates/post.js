@@ -2,12 +2,13 @@ import "katex/dist/katex.css";
 import "prismjs/themes/prism.css";
 import React from "react";
 import Post from '../components/Post';
+import { graphql } from 'gatsby';
 
-export default ({ data, pathContext }) => {
+export default ({ data, pageContext }) => {
   return <Post
       postData={data.markdownRemark}
-      next={pathContext.next}
-      previous={pathContext.previous} />;
+      next={pageContext.next}
+      previous={pageContext.previous} />;
 };
 
 export const query = graphql`
