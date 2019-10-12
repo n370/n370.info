@@ -13,7 +13,7 @@ export const query = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: {
-        fields: [frontmatter___date],
+        fields: [frontmatter___Date],
         order: DESC
       }
     ) {
@@ -22,8 +22,8 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
+            Title
+            Date(formatString: "DD MMMM, YYYY")
           }
           fields {
             slug

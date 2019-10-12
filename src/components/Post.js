@@ -11,7 +11,7 @@ class UnstyledPost extends React.Component {
 
   componentDidMount () {
     this.setupDisqs({
-      title: this.props.postData.frontmatter.title,
+      title: this.props.postData.frontmatter.Title,
       url: `https://n370.info/${this.props.postData.fields.slug}`,
       identifier: this.props.postData.frontmatter.uuid
     });
@@ -40,11 +40,11 @@ class UnstyledPost extends React.Component {
     return (
       <Layout>
         <Main className={className}>
-          <h1>{postData.frontmatter.title}</h1>
+          <h1>{postData.frontmatter.Title}</h1>
           <div className="markdown" dangerouslySetInnerHTML={{ __html: postData.html }} />
           <div className="pagination">
-            <div>{previous && <Link to={previous.fields.slug}>Previous: {previous.frontmatter.title}</Link>}</div>
-            <div>{next && <Link to={next.fields.slug}>Next: {next.frontmatter.title}</Link>}</div>
+            <div>{previous && <Link to={previous.fields.slug}>Previous: {previous.frontmatter.Title}</Link>}</div>
+            <div>{next && <Link to={next.fields.slug}>Next: {next.frontmatter.Title}</Link>}</div>
           </div>
           <div id="disqus_thread"></div>
         </Main>

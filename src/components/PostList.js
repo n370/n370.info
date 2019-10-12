@@ -9,8 +9,8 @@ const UnstyledPostList = ({ className, postList }) => (
           className="link"
           to={node.fields.slug}
           key={node.id}>
-            <span className="date">{node.frontmatter.date}</span>
-            <h3 className="title">{node.frontmatter.title}</h3>
+            <span className="date">{node.frontmatter.Date}</span>
+            <h3 className="title">{node.frontmatter.Title}</h3>
         </Link>
       ))}
   </div>

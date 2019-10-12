@@ -19,8 +19,7 @@ export const query = graphql`
       }
       html
       frontmatter {
-        uuid
-        title
+        Title
       }
     }
   }
