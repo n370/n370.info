@@ -6,6 +6,9 @@ const UnstyledHeader = ({ className, siteMetadata }) => {
   return (
     <div className={className}>
       <Link to="/"><h3>{siteMetadata.title}</h3></Link>
+      <div>
+        <a href="https://www.codementor.io/n370"><img src="https://cdn.codementor.io/badges/book_session_github.svg" /></a>
+      </div>
     </div>
   )
 }
@@ -22,5 +25,9 @@ export default styled(UnstyledHeader)`
   box-sizing: border-box;
   a {
     text-decoration: none;
+
+    img {
+      vertical-align: text-bottom;
+    }
   }
 `;
