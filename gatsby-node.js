@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
               }
               frontmatter {
-                title
+                Title
               }
             }
             next {
@@ -33,7 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
               }
               frontmatter {
-                title
+                Title
               }
             }
             node {
