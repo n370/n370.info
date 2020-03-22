@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 
 export default ({data}) => (
   <Layout>
-    <PostList postList={data.allMarkdownRemark.edges} />;
+    <PostList postList={data.allMarkdownRemark.edges} />
   </Layout>
 );
 

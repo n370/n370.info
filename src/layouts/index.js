@@ -3,6 +3,7 @@ import '../styles/main.css';
 import React from "react";
 import Head from '../components/Head';
 import Header from '../components/Header';
+import Main from '../components/Main';
 import { graphql, StaticQuery } from 'gatsby';
 
 export default ({ children }) => (
@@ -20,7 +21,7 @@ export default ({ children }) => (
       <>
           <Head title={data.site.siteMetadata.title} />
           <Header siteMetadata={data.site.siteMetadata}/>
-          {children}
+          <Main>{children}</Main>
       </>
     )}
   />

@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
 import styled from 'styled-components';
-import Main from './Main';
 import Layout from "../layouts";
 
 class UnstyledPost extends React.Component {
@@ -39,7 +38,7 @@ class UnstyledPost extends React.Component {
     const className = this.props.className;
     return (
       <Layout>
-        <Main className={className}>
+        <div className={className}>
           <h1>{postData.frontmatter.Title}</h1>
           <div className="markdown" dangerouslySetInnerHTML={{ __html: postData.html }} />
           <div className="pagination">
@@ -47,7 +46,7 @@ class UnstyledPost extends React.Component {
             <div>{next && <Link to={next.fields.slug}>Next: {next.frontmatter.Title}</Link>}</div>
           </div>
           <div id="disqus_thread"></div>
-        </Main>
+        </div>
       </Layout>
     );
   }
@@ -67,10 +66,10 @@ export default styled(UnstyledPost)`
   #disqus_thread,
   .markdown > *:not(iframe),
   .pagination {
-    margin: 50px 25%;
+    margin: 50px 5%;
   }
   > div > .gatsby-highlight {
-    margin: 50px 20% 50px 20%;
+    margin: 50px 5%;
     border-radius: 5px;
     box-shadow: 1px 2px 7px 0px #d5d5d5;
     pre {
@@ -81,7 +80,7 @@ export default styled(UnstyledPost)`
     margin-top: 150px;
   }
   .pagination {
-    margin: 0 25%;
+    margin: 0 5%;
     display: flex;
     > * {
       flex-basis: 50%;
@@ -92,6 +91,20 @@ export default styled(UnstyledPost)`
     > *:last-child {
       padding: 0 0 0 10%;
       text-align: right;
+    }
+  }
+  @media (min-width: 720px) {
+    h1,
+    #disqus_thread,
+    .markdown > *:not(iframe),
+    .pagination {
+      margin: 50px 25%;
+    }
+    > div > .gatsby-highlight {
+      margin: 50px 20%;
+    }
+    .pagination {
+      margin: 0 25%;
     }
   }
 `;

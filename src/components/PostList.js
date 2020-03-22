@@ -1,24 +1,25 @@
 import React from "react";
 import styled from 'styled-components';
 import Link from "gatsby-link";
+import Main from './Main';
 
 const UnstyledPostList = ({ className, postList }) => (
   <div className={className}>
-      {postList.map(({ node }) => (
-        <Link
-          className="link"
-          to={node.fields.slug}
-          key={node.id}>
-            <span className="date">{node.frontmatter.Date}</span>
-            <h3 className="title">{node.frontmatter.Title}</h3>
-        </Link>
-      ))}
+    {postList.map(({ node }) => (
+      <Link
+        className="link"
+        to={node.fields.slug}
+        key={node.id}
+      >
+          <span className="date">{node.frontmatter.Date}</span>
+          <h3 className="title">{node.frontmatter.Title}</h3>
+      </Link>
+    ))}
   </div>
 );
 
 export default styled(UnstyledPostList)`
-  min-width: 640px;
-  margin: 100px 30% 50px 20%;
+  margin: 30px 5%;
   .link {
     text-decoration: none;
     display: flex;
@@ -35,7 +36,12 @@ export default styled(UnstyledPostList)`
   }
   .title {
     width: 70%;
-    padding-left: 10%;
-    font-family: 'Viga', sans-serif;
+    padding: 0 0 0 10%;
+  }
+  @media (min-width: 720px) {
+    min-width: 640px;
+    .title {
+      padding: 0 25% 0 10%;
+    }
   }
 `;
