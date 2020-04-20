@@ -53,6 +53,9 @@ class UnstyledPost extends React.Component {
 }
 
 export default styled(UnstyledPost)`
+  img{
+    width: 100%;
+  }
   a {
     color: darkcyan;
   }
