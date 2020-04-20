@@ -38,6 +38,9 @@ export default styled(UnstyledPostList)`
     width: 70%;
     padding: 0 0 0 10%;
   }
+  @media (max-width: 320px) {
+    margin-top: 80px;
+  }
   @media (min-width: 720px) {
     min-width: 640px;
     .title {
