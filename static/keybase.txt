@@ -4,69 +4,49 @@ https://keybase.io/n370
 
 I hereby claim:
 
-  * I am an admin of http://n370.info
+  * I am an admin of https://n370.info
   * I am n370 (https://keybase.io/n370) on keybase.
-  * I have a public key with fingerprint B9A1 62A6 F67D F461 68FD  0586 79D0 F928 99B6 04FD
+  * I have a public key ASBQtonCIoTE-MyrkBHEL9ZuafWEjmFR-1XJna0w3Y65ZQo
 
-To claim this, I am signing this object:
+To do so, I am signing this object:
 
 {
-    "body": {
-        "client": {
-            "name": "keybase.io node.js client",
-            "version": "0.7.3"
-        },
-        "key": {
-            "fingerprint": "b9a162a6f67df46168fd058679d0f92899b604fd",
-            "host": "keybase.io",
-            "key_id": "79D0F92899B604FD",
-            "uid": "0684e8c577df62b43498b714d4060f00",
-            "username": "n370"
-        },
-        "merkle_root": {
-            "ctime": 1417745775,
-            "hash": "7589d35d299f3b5877dd99147785b388314140f47fae46aa383181d845b4efd11616b747dbd83c8767805c25511db7d509f6b667d1f6f85f9372c41e8a04648f",
-            "seqno": 102025
-        },
-        "service": {
-            "hostname": "n370.info",
-            "protocol": "http:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "01011a29447e443645a1bbec17bafdf127302bc08b00b6927e3834bf81e949ef815d0a",
+      "host": "keybase.io",
+      "kid": "012050b689c22284c4f8ccab9011c42fd66e69f5848e6151fb55c99dad30dd8eb9650a",
+      "uid": "0684e8c577df62b43498b714d4060f00",
+      "username": "n370"
     },
-    "ctime": 1417745819,
-    "expire_in": 157680000,
-    "prev": "07aeb3be06cb8d1a64ee8fc36b0ca349e791dbbce8455ced1e1be46c3e04968f",
-    "seqno": 5,
-    "tag": "signature"
+    "merkle_root": {
+      "ctime": 1606782577,
+      "hash": "f988f45e2ed03302cc2842b8bbdd2d74b0ee34e88ee0613dad51424486df17ad355c8e285e8637c777c7d82e843c3c896509879875c7640e8156df8d315bc090",
+      "hash_meta": "4a07fbde11b29105ae21544d3cc11455131eb913cba7124b2fef6dc73dd191f7",
+      "seqno": 18271376
+    },
+    "service": {
+      "entropy": "g7yKMsqRBshk8zBdCPEdC9ls",
+      "hostname": "n370.info",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1606782637,
+  "expire_in": 504576000,
+  "prev": "136d0d70f46c059aceb9d49ab0cdff8e4a2dce4286280574744574d723d384a1",
+  "seqno": 40,
+  "tag": "signature"
 }
 
-with the aforementioned key, yielding the PGP signature:
+which yields the signature:
 
------BEGIN PGP MESSAGE-----
-Comment: GPGTools - https://gpgtools.org
-
-owFVUm9oVlUcflcubP2HvaH9oXU/VNJ4Oefe83dJtbFWvAVCDIqCXu+555ztuu3e
-1/vezW3yro2QbZiWsWwjKwlUrEhk2ML8EGy9FKYEs9EHwQ+aNEVKJ5Yp2jljwbyf
-zv39nvP8nuf5nffvuT1TU9X92uTW46ub26uOzotM61B2/2ZHxLLPadjsBJ2hilJ7
-ivwu5TQ4HapP+CWVC+O6KJYqt6FUt4Spd3pUUgrjyKBAjuY8p1xv4fayDqM2lRST
-0HI5gvuQuD7RhEqNCCRMS4AZoVwCzV3GuSAAaWko2+NSestUZ5GzEEpTpbwZtCzi
-mwy+pdn0uhcbgDCkWICp4SeuQB7iTFCIJAIEaAAssKSSJUuRR4HV2qWSjk5VSOJ4
-0XCQhrYNEaQUGSps1PildjsXMy49LF3OtScwM2Mk5xBRyrDwGPPMHQQ0otpXiPi+
-ZyoMSoawQEpLCI1lQRGVQjIvYJRQBnDgYgyhFFRiwDURxIQDNdEMa+5RN0BQMR8g
-gpg28ktqYxQbccAFLi7b/6QnDJTVbSNb5iwXRtqmVkziNA7iTlNuT9Nig3Wc9hUt
-bJMShSWCvQURRtJsa/k6oYHemgaDvN5RvcUwUYXQIjAlDJjPzlE9dgXUV8ITCpBA
-MAl9gpRiOvCIAIFv9qEoN2ZFoEwqOFASKihMWIGnAOJkuUeTe+q3GcpS2Bb5aXei
-nPJo1SMrMlU1mTuqb7PvNVNz5/3/P+Lj+ZWZdwr/jshXymfwS/3RwdP7+dO7dlyo
-6B3/1K75utFfyFfOD39Rff1U9an53T89emWycujxkVXZ7dkrWx7bc+nzhWnn29++
-h0+9Onbx3m2/3jdUv2Hd8y+czk18dPWhA2sHx86u7ml2x18+0vv6J2t/GXujPLdr
-eLj1g60nG+eP7JteaOqou3l0tnIonsCrsrVv7ZzMz73HhgY8sL38xNSNP7qyf8/e
-fUbpfZ07f9793ejgh7N/7fVGNv4+827/wepzz3wz8OKaphMHWmemR79kUyf7N/0w
-8WD+zeiuwencsb4fz55rqT3WmP10z1w+99xUzcNbPvtzbD3p3fbkyoHxB76K1739
-8aWZ8cuHT1SevfYf
-=Nh1U
------END PGP MESSAGE-----
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgULaJwiKExPjMq5ARxC/Wbmn1hI5hUftVyZ2tMN2OuWUKp3BheWxvYWTESpcCKMQgE20NcPRsBZrOudSasM3/jkotzkKGKAV0dEV01yPThKHEIIemFATX480lPhad2I1+fBi2mO9qYgHRyNJPsN+bwg00AgHCo3NpZ8RApEH0tPH7WcAF7p5BgKdoCwyT8QUAsDN539jmoYkliSKKVWb22Wz8DpM7A3US+aGiBfA03tvXlTdYGkL+uponCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJMe575yd66jBEG+YuEQWJ3ATwvRyCRGEr7V4VSVmvBuo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
