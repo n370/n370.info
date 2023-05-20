@@ -9,7 +9,7 @@ const UnstyledHeader = ({ className, siteMetadata }) => {
         <h3>{siteMetadata.title}</h3>
       </Link>
       <div className="social">
-        <a href="https://dev.to/n370">
+        <a target="_blank" href="https://dev.to/n370">
           <img
             src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
             alt="|\|370's DEV Profile"
@@ -17,7 +17,7 @@ const UnstyledHeader = ({ className, siteMetadata }) => {
             width="30"
           />
         </a>
-        <a href="https://www.codementor.io/@n370?refer=badge">
+        <a target="_blank" href="https://www.codementor.io/@n370?refer=badge">
           <img
             src="https://www.codementor.io/m-badges/n370/get-help.svg"
             alt="Codementor badge"

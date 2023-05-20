@@ -1,15 +1,20 @@
 import "katex/dist/katex.css";
 import "prismjs/themes/prism.css";
 import React from "react";
-import Post from '../components/Post';
-import { graphql } from 'gatsby';
+import Post from "../components/Post";
+import { graphql } from "gatsby";
 
-export default ({ data, pageContext }) => {
-  return <Post
+const PostPage = ({ data, pageContext }) => {
+  return (
+    <Post
       postData={data.markdownRemark}
       next={pageContext.next}
-      previous={pageContext.previous} />;
+      previous={pageContext.previous}
+    />
+  );
 };
+
+export default PostPage;
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
