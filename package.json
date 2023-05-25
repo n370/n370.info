@@ -27,6 +27,7 @@
     "styled-components": "5.3.10"
   },
   "devDependencies": {
+    "eslint-config-react-app": "7.0.1",
     "gatsby-cli": "5.10.0"
   }
 }

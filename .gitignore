@@ -10,6 +10,9 @@ public
 # Netlify
 .netlify
 
+# IDE
+.vscode
+
 # Logs
 logs
 *.log
