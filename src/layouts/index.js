@@ -1,28 +1,27 @@
-import 'normalize.css/normalize.css';
-import '../styles/main.css';
+import "normalize.css/normalize.css";
+import "../styles/main.css";
 import React from "react";
-import Head from '../components/Head';
-import Header from '../components/Header';
-import Main from '../components/Main';
-import { graphql, StaticQuery } from 'gatsby';
+import Head from "../components/Head";
+import Header from "../components/Header";
+import Main from "../components/Main";
+import { graphql, useStaticQuery } from "gatsby";
 
-export default ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query LayoutQuery {
-        site {
-          siteMetadata {
-            title
-          }
+export default ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      site {
+        siteMetadata {
+          title
         }
       }
-    `}
-    render={data => (
-      <>
-          <Head title={data.site.siteMetadata.title} />
-          <Header siteMetadata={data.site.siteMetadata}/>
-          <Main>{children}</Main>
-      </>
-    )}
-  />
-);
+    }
+  `);
+
+  return (
+    <>
+      <Head title={data.site.siteMetadata.title} />
+      <Header siteMetadata={data.site.siteMetadata} />
+      <Main>{children}</Main>
+    </>
+  );
+};
