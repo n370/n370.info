@@ -12,7 +12,7 @@
 
 ### n370.info/
 
-[![Book session on Codementor](https://cdn.codementor.io/badges/book_session_github.svg)](https://www.codementor.io/n370)
+[![Book session on Codementor](https://www.codementor.io/m-badges/n370/get-help.svg)](https://www.codementor.io/@n370?refer=badge)
 
 <br />
 
