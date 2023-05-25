@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <PostList postList={data.allMarkdownRemark.edges} />
+    <PostList postList={data.allMdx.edges} />
   </Layout>
 );
 
@@ -13,7 +13,7 @@ export default IndexPage;
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { frontmatter: { Date: DESC } }) {
+    allMdx(sort: { frontmatter: { Date: DESC } }) {
       totalCount
       edges {
         node {

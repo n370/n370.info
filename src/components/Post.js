@@ -1,59 +1,60 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby-link";
-import styled from 'styled-components';
+import styled from "styled-components";
 import Layout from "../layouts";
 
-class UnstyledPost extends React.Component {
-  constructor (props) {
-    super(props);
+function setupDisqs({ url, identifier, title }) {
+  // RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  // LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+  function disqus_config() {
+    this.page.title = title;
+    this.page.url = url; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = identifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
   }
-
-  componentDidMount () {
-    this.setupDisqs({
-      title: this.props.postData.frontmatter.Title,
-      url: `https://n370.info/${this.props.postData.fields.slug}`,
-      identifier: this.props.postData.frontmatter.uuid
-    });
-  }
-
-  setupDisqs ({ url, identifier, title }) {
-    // RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    // LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-    var disqus_config = function () {
-      this.page.title = title;
-      this.page.url = url;  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = identifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://n370.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  }
-
-  render () {
-    const postData = this.props.postData;
-    const next = this.props.next;
-    const previous = this.props.previous;
-    const className = this.props.className;
-    return (
-      <Layout>
-        <div className={className}>
-          <h1>{postData.frontmatter.Title}</h1>
-          <div className="markdown" dangerouslySetInnerHTML={{ __html: postData.html }} />
-          <div className="pagination">
-            <div>{previous && <Link to={previous.fields.slug}>Previous: {previous.frontmatter.Title}</Link>}</div>
-            <div>{next && <Link to={next.fields.slug}>Next: {next.frontmatter.Title}</Link>}</div>
-          </div>
-          <div id="disqus_thread"></div>
-        </div>
-      </Layout>
-    );
-  }
+  // DON'T EDIT BELOW THIS LINE
+  var d = document,
+    s = d.createElement("script");
+  s.src = "https://n370.disqus.com/embed.js";
+  s.setAttribute("data-timestamp", +new Date());
+  (d.head || d.body).appendChild(s);
 }
 
+const UnstyledPost = ({ postData, next, previous, className, children }) => {
+  useEffect(() => {
+    setupDisqs({
+      title: postData.frontmatter.Title,
+      url: `https://n370.info/${postData.fields.slug}`,
+      identifier: postData.frontmatter.uuid,
+    });
+  }, []);
+
+  return (
+    <Layout>
+      <div className={className}>
+        <h1>{postData.frontmatter.Title}</h1>
+        <div className="markdown">{children}</div>
+        <div className="pagination">
+          <div>
+            {previous && (
+              <Link to={previous.fields.slug}>
+                Previous: {previous.frontmatter.Title}
+              </Link>
+            )}
+          </div>
+          <div>
+            {next && (
+              <Link to={next.fields.slug}>Next: {next.frontmatter.Title}</Link>
+            )}
+          </div>
+        </div>
+        <div id="disqus_thread"></div>
+      </div>
+    </Layout>
+  );
+};
+
 export default styled(UnstyledPost)`
-  img{
+  img {
     width: 100%;
   }
   a {
@@ -62,12 +63,17 @@ export default styled(UnstyledPost)`
   p {
     font-size: 1.4rem;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Viga', sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Viga", sans-serif;
   }
   h1,
   #disqus_thread,
-  .markdown > *:not(iframe),
+  .markdown,
   .pagination {
     margin: 50px 5%;
   }
@@ -99,7 +105,7 @@ export default styled(UnstyledPost)`
   @media (min-width: 720px) {
     h1,
     #disqus_thread,
-    .markdown > *:not(iframe),
+    .markdown,
     .pagination {
       margin: 50px 25%;
     }

@@ -1,32 +1,30 @@
 module.exports = {
-    siteMetadata: {
-        title: '|\\|370.info'
+  siteMetadata: {
+    title: "|\\|370.info",
+  },
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-styled-components",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: ["gatsby-remark-katex", "gatsby-remark-prismjs"],
+      },
     },
-    plugins: [
-        'gatsby-plugin-react-helmet',
-        'gatsby-plugin-styled-components',
-        {
-            resolve: 'gatsby-plugin-google-tagmanager',
-            options: {
-              id: 'GTM-KXTGFL',
-              includeInDevelopment: false,
-            },
-        },
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                name: 'posts',
-                path: `${__dirname}/posts/`
-            }
-        },
-        {
-            resolve: 'gatsby-transformer-remark',
-            options: {
-                plugins: [
-                    'gatsby-remark-katex',
-                    'gatsby-remark-prismjs'
-                ]
-            }
-        }
-    ]
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-KXTGFL",
+        includeInDevelopment: false,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/posts/`,
+      },
+    },
+  ],
 };
