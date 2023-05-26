@@ -8,6 +8,9 @@ const UnstyledHeader = ({ className, siteMetadata }) => {
       <Link to="/">
         <h3>{siteMetadata.title}</h3>
       </Link>
+      <Link to="/about">
+        <h4>About me</h4>
+      </Link>
     </div>
   );
 };
