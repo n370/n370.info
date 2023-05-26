@@ -42,7 +42,8 @@ export default styled(UnstyledLayout)`
     h5,
     h6,
     a,
-    small {
+    small,
+    button {
       font-family: "Lexend", sans-serif;
     }
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import ExternalLink from "../components/ExternalLink";
+import GPG from "../components/GPG";
 import styled from "styled-components";
 
 const UnstyledAboutPage = ({ className }) => {
@@ -50,6 +51,10 @@ const UnstyledAboutPage = ({ className }) => {
             </ExternalLink>{" "}
           </>
         ))}
+        <div className="gpg">
+          <h4>GPG Key</h4>
+          <GPG />
+        </div>
       </div>
     </Layout>
   );
@@ -58,13 +63,14 @@ const UnstyledAboutPage = ({ className }) => {
 export default styled(UnstyledAboutPage)`
   width: 50%;
 
+  .gpg {
+    margin-top: 3em;
+  }
+
   .profile-image {
     width: 200px;
     border-radius: 2px;
     filter: contrast(90%) brightness(90%);
-  }
-
-  .social {
   }
 
   .social-link {
