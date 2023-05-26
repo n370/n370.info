@@ -1,15 +1,30 @@
 import React from "react";
 import styled from 'styled-components';
+import { Link } from 'gatsby-link';
 
 const UnstyledFooter = ({ className, siteMetadata }) => (
-  <small className={className}>{siteMetadata.title}</small>
+  <div className={className}>
+    <div>
+      <small>{siteMetadata.title}</small>
+      <br />
+      <br />
+      <small>El Viejo Pancho 1513, CP 20000, Uruguay</small>
+    </div>
+    <div>
+      <Link href="/about"><small>About me</small></Link>
+      <Link href="/colophon"><small>Colophon</small></Link>
+    </div>
+  </div>
 );
 
 export default styled(UnstyledFooter)`
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  padding: 20px 3%;
-  box-sizing: border-box;
-  text-align: right;
+  padding: 10em 0 5em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    margin-right: 1em;
+  }
 `;

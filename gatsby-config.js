@@ -9,7 +9,15 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".mdx", ".md"],
-        gatsbyRemarkPlugins: ["gatsby-remark-katex", "gatsby-remark-prismjs"],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-katex",
+            options: {
+              macros: {},
+            },
+          },
+          "gatsby-remark-prismjs",
+        ],
       },
     },
     {

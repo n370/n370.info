@@ -18,7 +18,7 @@ function setupDisqs({ url, identifier, title, shortname }) {
     var dsq = document.createElement("script");
     dsq.type = "text/javascript";
     dsq.async = true;
-    dsq.src = "http://" + shortname + ".disqus.com/embed.js";
+    dsq.src = "https://" + shortname + ".disqus.com/embed.js";
     (
       document.getElementsByTagName("head")[0] ||
       document.getElementsByTagName("body")[0]
@@ -77,30 +77,6 @@ const UnstyledPost = ({ postData, next, previous, className, children }) => {
 export default styled(UnstyledPost)`
   padding: 0 25%;
 
-  :not(.gatsby-highlight) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Lexend", sans-serif;
-    }
-
-    h1 {
-      font-size: 3.2em;
-      margin-bottom: 1.3em;
-    }
-
-    p,
-    span :not(.gatsby-highlight) & {
-      margin: 2em 0;
-      font-family: "PT Serif", serif;
-      font-size: 1.25em;
-      line-height: 1.45;
-    }
-  }
-
   img {
     width: 100%;
   }
@@ -110,6 +86,8 @@ export default styled(UnstyledPost)`
   }
 
   .pagination {
+    margin: 10em 0;
+
     display: flex;
     > * {
       flex-basis: 50%;
@@ -121,6 +99,14 @@ export default styled(UnstyledPost)`
       padding: 0 0 0 10%;
       text-align: right;
     }
+  }
+
+  .math {
+    margin: 5em 0;
+  }
+
+  .katex {
+    font-size: 1.8em;
   }
 
   @media (min-width: 720px) {

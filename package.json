@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "2.3.0",
+    "@observablehq/plot": "0.6.7",
     "d3": "7.8.4",
     "gatsby": "5.10.0",
     "gatsby-link": "5.10.0",

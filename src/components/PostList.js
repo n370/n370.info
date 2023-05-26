@@ -11,7 +11,7 @@ const UnstyledPostList = ({ className, postList }) => (
         key={node.id}
       >
           <span className="date">{node.frontmatter.Date}</span>
-          <h3 className="title">{node.frontmatter.Title}</h3>
+          <h5 className="title">{node.frontmatter.Title}</h5>
       </Link>
     ))}
   </div>
@@ -23,6 +23,7 @@ export default styled(UnstyledPostList)`
     display: flex;
     align-items: center;
     color: inherit;
+    padding: 0.75em 0;
     &:hover {
       background: rgba(255,255,255,0.1);
     }

@@ -1,45 +1,73 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
+import ExternalLink from "../components/ExternalLink";
 import styled from "styled-components";
 
-const UnstyledAboutPage = () => (
-  <Layout>
-    <h1>About</h1>
-    <div className="social">
-      <a rel="noreferrer" target="_blank" href="https://dev.to/n370">
+const UnstyledAboutPage = ({ className }) => {
+  const [social, setSocial] = useState([]);
+
+  useEffect(() => {
+    run();
+
+    async function run() {
+      const res = await fetch("/data/social.json");
+      const body = await res.json();
+      setSocial(body.data);
+    }
+  }, []);
+
+  return (
+    <Layout>
+      <div className={className}>
         <img
-          src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
-          alt="|\|370's DEV Profile"
-          height="30"
-          width="30"
+          className="profile-image"
+          src="/images/pages/about/profile.jpeg"
+          alt="Dylson Valente Neto"
         />
-      </a>
-      <a
-        rel="noreferrer"
-        target="_blank"
-        href="https://www.codementor.io/@n370?refer=badge"
-      >
-        <img
-          src="https://www.codementor.io/m-badges/n370/get-help.svg"
-          alt="Codementor badge"
-        />
-      </a>
-    </div>
-  </Layout>
-);
+        <h3>Hi there! welcome to my website.</h3>
+        <p>
+          My name is Dylson, also know on the Internet as |\|370, n370 or
+          n370n370.
+        </p>
+        <p>
+          For over 25 years I have dedicated myself to build creative and
+          network-connected computing solutions for clients big and small all
+          around the world. {"I'm"} passionate about doing it, {"let's"} talk.
+          You can text me at <i>ama et n370.info</i> or in any of the social
+          channels linked bellow.
+        </p>
+        <p>I hope you like what you find here.</p>
+        <h4>Elsewhere</h4>
+        {social.map(({ url, name }) => (
+          <>
+            <ExternalLink
+              className="social-link"
+              key={name}
+              alt={name}
+              href={url}
+            >
+              {name}
+            </ExternalLink>{" "}
+          </>
+        ))}
+      </div>
+    </Layout>
+  );
+};
 
 export default styled(UnstyledAboutPage)`
-  .social {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-width: 250px;
-    a {
-      text-decoration: none;
+  width: 50%;
 
-      img {
-        vertical-align: text-bottom;
-      }
-    }
+  .profile-image {
+    width: 200px;
+    border-radius: 2px;
+    filter: contrast(90%) brightness(90%);
+  }
+
+  .social {
+  }
+
+  .social-link {
+    margin-right: 0.5em;
   }
 `;

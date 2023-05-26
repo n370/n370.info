@@ -6,18 +6,14 @@ const UnstyledHeader = ({ className, siteMetadata }) => {
   return (
     <div className={className}>
       <Link to="/">
-        <h3>{siteMetadata.title}</h3>
-      </Link>
-      <Link to="/about">
-        <h4>About me</h4>
+        <h5>{siteMetadata.title}</h5>
       </Link>
     </div>
   );
 };
 
 export default styled(UnstyledHeader)`
-  height: var(--header-height)
-  position: fixed;
+  height: var(--header-height);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -25,6 +21,4 @@ export default styled(UnstyledHeader)`
   z-index: 1;
   top: 0;
   width: 100%;
-  padding: 20px 0;
-  box-sizing: border-box;
 `;
