@@ -67,24 +67,34 @@ L2uO3L05Ou9h6cMlvic4xppvM1MXteNpiybgBV8H9l207UHSpZhpGWyGCssbIhE5
   };
   return (
     <div className={className}>
-      <button type="button" onClick={() => copyKey()}>
-        <FaRegCopy />
-      </button>
+      <div className="button-wrapper">
+        <button type="button" onClick={() => copyKey()}>
+          <FaRegCopy />
+        </button>
+      </div>
       <pre className="key">{key}</pre>
     </div>
   );
 };
 export default styled(UnstyledGPG)`
+  position: relative;
   padding: 1em;
   margin: 1em 0;
   background: #1e1e1e;
+
+  .button-wrapper {
+    position: absolute;
+    left: 0;
+    right: 1em;
+    display: flex;
+    justify-content: flex-end;
+  }
 
   button {
     border-radius: 0.25em;
     height: 2em;
     width: 2em;
     color: #939393;
-    float: right;
     border: none;
     background: #353535;
     cursor: pointer;
