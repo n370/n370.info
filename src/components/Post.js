@@ -75,7 +75,7 @@ const UnstyledPost = ({ postData, next, previous, className, children }) => {
 };
 
 export default styled(UnstyledPost)`
-  padding: 0 25%;
+  padding: 0 5%;
 
   img {
     width: 100%;
@@ -110,5 +110,6 @@ export default styled(UnstyledPost)`
   }
 
   @media (min-width: 720px) {
+    padding: 0 25%;
   }
 `;
