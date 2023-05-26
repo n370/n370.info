@@ -31,10 +31,10 @@ const UnstyledAboutPage = ({ className }) => {
           n370n370.
         </p>
         <p>
-          For over 25 years I have dedicated myself to build creative and
+          For over 20 years I have dedicated myself to build creative and
           network-connected computing solutions for clients big and small all
           around the world. {"I'm"} passionate about doing it, {"let's"} talk.
-          You can text me at <i>ama et n370.info</i> or in any of the social
+          You can text me on <i>ama at n370.info</i> or in any of the social
           channels linked bellow.
         </p>
         <p>I hope you like what you find here.</p>
@@ -61,19 +61,25 @@ const UnstyledAboutPage = ({ className }) => {
 };
 
 export default styled(UnstyledAboutPage)`
-  width: 50%;
-
   .gpg {
     margin-top: 3em;
   }
 
   .profile-image {
-    width: 200px;
+    width: 100%;
     border-radius: 2px;
     filter: contrast(90%) brightness(90%);
   }
 
   .social-link {
     margin-right: 0.5em;
+  }
+
+  @media (min-width: 400px) {
+    width: 50%;
+
+    .profile-image {
+      width: 200px;
+    }
   }
 `;

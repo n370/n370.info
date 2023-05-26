@@ -255,6 +255,10 @@ code[class*="language-html"] {
 	color: #d4d4d4;
 }
 
+code[class*="language-text"] {
+  white-space: pre-wrap;
+}
+
 .language-regex .token.anchor {
 	color: #dcdcaa;
 }

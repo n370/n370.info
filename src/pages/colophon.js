@@ -27,6 +27,10 @@ const UnstyledColophonPage = ({ className }) => {
 
 export default styled(UnstyledColophonPage)`
   font-size: 14px;
-  margin: 0 20%;
   text-align: center;
+  margin: 0;
+
+  @media (min-width: 400px) {
+    margin: 0 20%;
+  }
 `;

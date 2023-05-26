@@ -1,30 +1,66 @@
 import React from "react";
-import styled from 'styled-components';
-import { Link } from 'gatsby-link';
+import styled from "styled-components";
+import { Link } from "gatsby-link";
 
 const UnstyledFooter = ({ className, siteMetadata }) => (
   <div className={className}>
-    <div>
+    <div className="info">
       <small>{siteMetadata.title}</small>
       <br />
       <br />
       <small>El Viejo Pancho 1513, CP 20000, Uruguay</small>
     </div>
-    <div>
-      <Link href="/about"><small>About me</small></Link>
-      <Link href="/colophon"><small>Colophon</small></Link>
+    <div className="links">
+      <Link href="/about">
+        <small>About me</small>
+      </Link>
+      <Link href="/colophon">
+        <small>Colophon</small>
+      </Link>
     </div>
   </div>
 );
 
 export default styled(UnstyledFooter)`
   width: 100%;
-  padding: 10em 0 5em 0;
+  padding: 5em 0 2.5em 0;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
 
   a {
-    margin-right: 1em;
+    margin: 1em 0 0 0;
+    display: block;
+  }
+
+  small {
+    font-size: 14px;
+  }
+
+  .info,
+  .links {
+    width: 100%;
+    margin: 2em 0;
+  }
+
+  @media (min-width: 400px) {
+    padding: 10em 0 5em 0;
+    flex-direction: row;
+
+    a {
+      margin: 0 1em 0 0;
+      display: unset;
+    }
+
+    small {
+      font-size: unset;
+    }
+
+    .info,
+    .links {
+      width: unset;
+      margin: unset;
+    }
   }
 `;

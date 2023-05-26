@@ -95,8 +95,15 @@ export default styled(UnstyledGPG)`
   }
 
   .key {
+    font-size: 8px;
     font-family: monospace;
     color: inherit;
     white-space: pre-wrap;
+  }
+
+  @media (min-width: 400px) {
+    .key {
+      font-size: unset;
+    }
   }
 `;
