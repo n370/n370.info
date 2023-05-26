@@ -1,7 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 import { Link } from "gatsby-link";
-import Main from './Main';
 
 const UnstyledPostList = ({ className, postList }) => (
   <div className={className}>
@@ -19,19 +18,17 @@ const UnstyledPostList = ({ className, postList }) => (
 );
 
 export default styled(UnstyledPostList)`
-  margin: 30px 5%;
   .link {
     text-decoration: none;
     display: flex;
     align-items: center;
     color: inherit;
     &:hover {
-      background: #f7f7f7;
+      background: rgba(255,255,255,0.1);
     }
   }
   .date {
     width: 25%;
-    color: darkcyan;
     text-align: right;
   }
   .title {
@@ -39,10 +36,8 @@ export default styled(UnstyledPostList)`
     padding: 0 0 0 10%;
   }
   @media (max-width: 320px) {
-    margin-top: 80px;
   }
   @media (min-width: 720px) {
-    min-width: 640px;
     .title {
       padding: 0 25% 0 10%;
     }

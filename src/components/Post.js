@@ -1,95 +1,115 @@
 import React, { useEffect } from "react";
 import { Link } from "gatsby-link";
 import styled from "styled-components";
-import Layout from "../layouts";
 
-function setupDisqs({ url, identifier, title }) {
-  // RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-  // LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-  function disqus_config() {
-    this.page.title = title;
-    this.page.url = url; // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = identifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  }
-  // DON'T EDIT BELOW THIS LINE
-  var d = document,
-    s = d.createElement("script");
-  s.src = "https://n370.disqus.com/embed.js";
-  s.setAttribute("data-timestamp", +new Date());
-  (d.head || d.body).appendChild(s);
+function setupDisqs({ url, identifier, title, shortname }) {
+  // https://help.disqus.com/en/articles/1717163-using-disqus-on-ajax-sites
+
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  window.disqus_identifier = identifier;
+  window.disqus_url = url;
+
+  window.disqus_config = function () {
+    // this.language = "en";
+  };
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function () {
+    var dsq = document.createElement("script");
+    dsq.type = "text/javascript";
+    dsq.async = true;
+    dsq.src = "http://" + shortname + ".disqus.com/embed.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(dsq);
+  })();
+
+  /* * * Disqus Reset Function * * */
+  window.reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+    window.DISQUS.reset({
+      reload: true,
+      config: function () {
+        this.page.identifier = newIdentifier;
+        this.page.url = newUrl;
+        this.page.title = newTitle;
+        this.language = newLanguage;
+      },
+    });
+  };
 }
 
 const UnstyledPost = ({ postData, next, previous, className, children }) => {
+  const disqus_shortname = "n370";
+
   useEffect(() => {
     setupDisqs({
+      shortname: disqus_shortname,
       title: postData.frontmatter.Title,
-      url: `https://n370.info/${postData.fields.slug}`,
-      identifier: postData.frontmatter.uuid,
+      url: `https://n370.info${postData.fields.slug}`,
+      identifier: postData.fields.slug,
     });
-  }, []);
+  }, [postData.fields.slug, postData.frontmatter.Title]);
 
   return (
-    <Layout>
-      <div className={className}>
-        <h1>{postData.frontmatter.Title}</h1>
-        <div className="markdown">{children}</div>
-        <div className="pagination">
-          <div>
-            {previous && (
-              <Link to={previous.fields.slug}>
-                Previous: {previous.frontmatter.Title}
-              </Link>
-            )}
-          </div>
-          <div>
-            {next && (
-              <Link to={next.fields.slug}>Next: {next.frontmatter.Title}</Link>
-            )}
-          </div>
+    <div className={className}>
+      <h1>{postData.frontmatter.Title}</h1>
+      <div className="markdown">{children}</div>
+      <div className="pagination">
+        <div>
+          {previous && (
+            <Link to={previous.fields.slug}>
+              Previous: {previous.frontmatter.Title}
+            </Link>
+          )}
         </div>
-        <div id="disqus_thread"></div>
+        <div>
+          {next && (
+            <Link to={next.fields.slug}>Next: {next.frontmatter.Title}</Link>
+          )}
+        </div>
       </div>
-    </Layout>
+      <div id="disqus_thread"></div>
+    </div>
   );
 };
 
 export default styled(UnstyledPost)`
+  padding: 0 25%;
+
+  :not(.gatsby-highlight) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lexend", sans-serif;
+    }
+
+    h1 {
+      font-size: 3.2em;
+      margin-bottom: 1.3em;
+    }
+
+    p,
+    span :not(.gatsby-highlight) & {
+      margin: 2em 0;
+      font-family: "PT Serif", serif;
+      font-size: 1.25em;
+      line-height: 1.45;
+    }
+  }
+
   img {
     width: 100%;
   }
-  a {
-    color: darkcyan;
-  }
-  p {
-    font-size: 1.4rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Viga", sans-serif;
-  }
-  h1,
-  #disqus_thread,
-  .markdown,
-  .pagination {
-    margin: 50px 5%;
-  }
-  > div > .gatsby-highlight {
-    margin: 50px 5%;
-    border-radius: 5px;
-    box-shadow: 1px 2px 7px 0px #d5d5d5;
-    pre {
-      border-radius: inherit;
-    }
-  }
+
   #disqus_thread {
     margin-top: 150px;
   }
+
   .pagination {
-    margin: 0 5%;
     display: flex;
     > * {
       flex-basis: 50%;
@@ -102,18 +122,7 @@ export default styled(UnstyledPost)`
       text-align: right;
     }
   }
+
   @media (min-width: 720px) {
-    h1,
-    #disqus_thread,
-    .markdown,
-    .pagination {
-      margin: 50px 25%;
-    }
-    > div > .gatsby-highlight {
-      margin: 50px 20%;
-    }
-    .pagination {
-      margin: 0 25%;
-    }
   }
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import PostList from "../components/PostList";
-import Layout from "../layouts";
+import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => (

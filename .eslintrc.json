@@ -2,5 +2,23 @@
   "globals": {
     "__PATH_PREFIX__": true
   },
-  "extends": "react-app"
+  "extends": ["eslint:recommended", "react-app", "plugin:react/recommended"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "react/prop-types": "off",
+    "no-unused-vars": "warn"
+  },
+  "overrides": [
+    {
+      "files": "*.{mdx,md}",
+      "env": {
+        "browser": true
+      },
+      "extends": ["plugin:mdx/recommended"]
+    }
+  ]
 }

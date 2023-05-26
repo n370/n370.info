@@ -1,7 +1,17 @@
-* {
-  font-family: sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@600&family=PT+Serif:ital@0;1&display=swap");
+
+:root {
+  --header-height: 50px;
 }
 
-a, a:visited {
+body {
+  font-family: sans-serif;
+  font-weight: normal;
+  background: #151515;
+  color: #939393;
+}
+
+a,
+a:visited {
   color: inherit;
 }
