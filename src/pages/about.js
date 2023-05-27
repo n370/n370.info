@@ -27,7 +27,7 @@ const UnstyledAboutPage = ({ className }) => {
         />
         <h3>Hi there! welcome to my website.</h3>
         <p>
-          My name is Dylson, also know on the Internet as |\|370, n370 or
+          My name is Dylson, also known on the Internet as |\|370, n370 or
           n370n370.
         </p>
         <p>
