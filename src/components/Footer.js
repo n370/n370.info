@@ -11,6 +11,9 @@ const UnstyledFooter = ({ className, siteMetadata }) => (
       <small>El Viejo Pancho 1513, CP 20000, Uruguay</small>
     </div>
     <div className="links">
+      <Link href="/cv">
+        <small><em>Curriculum Vitae</em></small>
+      </Link>
       <Link href="/about">
         <small>About me</small>
       </Link>
@@ -32,6 +35,11 @@ export default styled(UnstyledFooter)`
   a {
     margin: 1em 0 0 0;
     display: block;
+  }
+
+  em {
+    font-style: normal;
+    font-weight: 300;
   }
 
   small {

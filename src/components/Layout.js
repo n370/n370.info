@@ -45,6 +45,7 @@ export default styled(UnstyledLayout)`
     small,
     button {
       font-family: "Lexend", sans-serif;
+      font-weight: 600;
     }
 
     ${[1,2,3,4,5,6].map((n, i, l) => {

@@ -1,305 +1,303 @@
 {
-  "header": {
-    "fullName": "Dylson Valente Neto",
-    "phoneNumber": "+598 0 97066874",
-    "emailAddress": "ama@n370.info",
-    "fiscalAddress": "Maldonado, Uruguay",
-    "webpageUrl": "https://n370.info/",
-    "socialNetworkProfiles": [
+  "data": {
+    "header": {
+      "fullName": "Dylson Valente Neto",
+      "phoneNumber": "+598 0 97066874",
+      "emailAddress": "ama at n370.info",
+      "fiscalAddress": "Maldonado, Uruguay",
+      "webpageUrl": "https://n370.info/",
+      "socialNetworkProfiles": [
+        {
+          "name": "GitHub",
+          "url": "https://www.github.com/n370"
+        },
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/dylsonvalenteneto"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/n370n370"
+        }
+      ]
+    },
+    "skillsAndQualifications": [
+      "8+ years of experience developing JavaScript applications.",
+      "12+ years of experience in Graphic Design and Visual Communication.",
+      "Comprehends modern computer application architectures and programming patterns.",
+      "Proficient in Web technologies, particularly JavaScript."
+    ],
+    "spokenLanguages": [
       {
-        "name": "GitHub",
-        "url": "https://www.github.com/n370"
+        "name": "English",
+        "level": "Professional working proficiency"
       },
       {
-        "name": "LinkedIn",
-        "url": "https://www.linkedin.com/in/dylsonvalenteneto"
+        "name": "Spanish",
+        "level": "Professional working proficiency"
       },
       {
-        "name": "Twitter",
-        "url": "https://twitter.com/n370n370"
+        "name": "Portuguese",
+        "level": "Native or bilingual proficiency"
+      }
+    ],
+    "employmentHistory": [
+      {
+        "companyName": "Nearform",
+        "role": "Web Developer",
+        "location": "Remote",
+        "start": "2021-02-01",
+        "end": null,
+        "description": [
+          "For the first half of the year I worked in a project for an accounting and finance start-up where I had a chance to completely change the way the client had been solving the problem of dynamically generating PDF documents with charts coming out of computed data.The new architecture based on open-source software, greatly simplified the solution and increased its quality, lowering costs and TTM.",
+          "Following that initial engagement, for the first couple of months of Q3 I then moved on to help a big name in the pharma and biotech industries implementing, publishing and maintaining several reusable software packages to an internal private npm registry which brought to life solutions for tasks ranging from user authentication, data auditing, and the persistence and query of digital information. These packages ended up being used by other product focused development squads inside the company and throughout this journey I worked closely with other nearformers in many different circumstances, frequently helping them increase the engaged NearForm team overall delivery quality.",
+          "Towards the final weeks of Q3 and into Q4 until the present moment, I was challenged to step up as the Technical Leader of one of the company product oriented squads which was having difficulties delivering. It has been a unique experience in my career to be the leader of a team made almost entirely by client staff and one where I was able to achieve tremendous success orchestrating and driving the engineering team as well as directly specifying, coding, reviewing and approving several features.",
+          "Working in very close synergy with client staff and other contractors across several disciplines, I was able to secure the production release of a game-changing software solution which is expected to increase the client’s operational efficiency, lower their costs and reduce their environmental footprint.",
+          "Among my daily activities in this role, I highlight pairing and collaborating with several members of the team in many disciplines around technical and non-technical topics helping the client company improve their processes inside and outside the software development discipline."
+        ],
+        "tools": [
+          "Typescript",
+          "Azure DevOps",
+          "Azure Cloud",
+          "Microsoft SQL Server",
+          "Node.js",
+          "npm",
+          "React",
+          "Docker",
+          "Microsoft Teams."
+        ]
+      },
+      {
+        "companyName": "Modus Create",
+        "role": "Web Developer",
+        "location": "Remote",
+        "start": "2018-11-01",
+        "end": "2021-02-01",
+        "description": [
+          "Throughout the 2019 contract I stayed focused on Back-End development and tooling, my daily tasks went about building and maintaining RESTful APIs and server-side JavaScript SDKs for end users to interact with. I was also co-responsible for a small web based text editor built with React and Material UI on top of Monaco.",
+          "By the time I signed the 2020 contract the 2019 projects entered maintenance mode and I was moved to another team to help build the next generation version of a consumer-facing front-end application. Since then my responsibilities go about building well tested React components with TypeScript, Jest, StoryBook and Cypress.io with occasional back-end work, mostly to extend or add new REST API endpoints."
+        ],
+        "tools": [
+          "Typescript",
+          "PostgreSQL",
+          "Node.js",
+          "npm",
+          "React",
+          "AWS",
+          "Docker",
+          "JIRA",
+          "Slack",
+          "Cucumber (Gherkin)",
+          "Postman (Newman)",
+          "Monaco Editor",
+          "Swagger (OpenAPI 3.0)",
+          "CodeFresh"
+        ]
+      },
+      {
+        "companyName": "Velocity Partners",
+        "role": "Web Developer",
+        "location": "Uruguay",
+        "start": "2017-01-01",
+        "end": "2018-11-01",
+        "description": [
+          "Here I worked supporting and extending a stateless Node.js application, two AngularJS SPAs and also built from scratch a modern Angular SPA using Typescript. I worked in these projects together with a distributed team of people located in the UK, India, Colombia and the USA. The Node.js application consisted of a back-end responsible for controlling different Unified Communication hardware through plain TCP/IP, SOAP and REST APIs as well as accessing the APIs of multiple calendaring service providers such as Microsoft's EWS under LDAP authentication.",
+          "The SPAs were basically the front-end for different business processes built on top of the core functionality exposed by the Node.js back-end service. Communication between back and front-end happened through WebSockets to execute actions going from retrieving data to be displayed in the browser, to controlling devices such as cameras and microphones. For the time I worked in this project I learned a lot about how Node.js low level networking features work. It was also an opportunity to learn Typescript, RxJS and extend my skill-set."
+        ],
+        "tools": [
+          "Angular.js",
+          "Angular",
+          "Typescript",
+          "JIRA",
+          "Confluence",
+          "GitLab",
+          "Node.js",
+          "npm",
+          "Zeplin.io",
+          "Inkscape",
+          "GIMP",
+          "Socket.io",
+          "RxJS",
+          "Windows 10",
+          "PowerShell"
+        ]
+      },
+      {
+        "companyName": "Huge",
+        "role": "Web Developer",
+        "location": "Brazil",
+        "start": "2016-07-01",
+        "end": "2016-10-01",
+        "description": [
+          "Joined a remote distributed team of developers from various backgrounds to implement testable and reusable UI components supporting browsers down to IE10 on Windows 7. My primary job was to write stand-alone, pre-parsed code in JADE/PUG, SASS and vanilla JavaScript implementing still mock-ups and design specs using a tricky Grunt and Gulp build architecture provided. In order to add dynamic behavior, it was a requirement to avoid the use of any JS framework on the frontend so I led the development of a custom solution using the Event Emitter pattern to proxy browser events and achieve the flexibility and structure needed to write modular, testable and readable code."
+        ],
+        "tools": [
+          "Require.js",
+          "Jasmine",
+          "npm",
+          "Grunt",
+          "Gulp",
+          "SASS",
+          "JADE/PUG",
+          "GitHub",
+          "Waffle.io"
+        ]
+      },
+      {
+        "companyName": "Altoros Systems",
+        "role": "Web Developer",
+        "location": "Argentina",
+        "start": "2015-01-01",
+        "end": "2016-02-01",
+        "description": [
+          "Worked designing and developing usable web interfaces and network services for web, mobile and desktop applications contributing to projects for clients like SATO, Cisco, Redwood Logistics, ROI·DNA, Avant, TD Ameritrade and to the development of internal tools such as Hacker Assessor, a talent assessment framework that tech leads in the Santa Fe and Buenos Aires development centers used to assess hires and monitor their performance over time.",
+          "Inside Altoros I found the opportunity to work with bleeding edge technologies such as Firebase, acquired by Google in 2014; MQTT, an M2M communication protocol deployed everywhere in the IoT industry and Node-RED, a flow-based programming tool built on top of Node.js that simplifies the integration of machines, cloud services and web service APIs. Day-to-day, however, my primary tools were Angular and Node.js that I used to build web apps drew on HTTP and WebSockets."
+        ],
+        "tools": [
+          "JavaScript",
+          "Bash",
+          "npm",
+          "Homebrew",
+          "RubyGems",
+          "RVM",
+          "PyPi",
+          "Caskroom",
+          "Vagrant",
+          "Redis",
+          "PostgreSQL",
+          "MongoDB",
+          "Heroku",
+          "AWS",
+          "Pivotal Tracker",
+          "Trello",
+          "Waffle.io",
+          "GitLab",
+          "GitHub",
+          "HipChat",
+          "Slack",
+          "WhatsApp",
+          "Skype",
+          "GSuite",
+          "Lucid Charts",
+          "InVision",
+          "MindMup",
+          "SketchApp"
+        ]
+      },
+      {
+        "companyName": "Gobierno de la Provincia de Santa Fe",
+        "role": "Web Developer",
+        "location": "Argentina",
+        "start": "2014-01-01",
+        "end": "2014-09-01",
+        "description": [
+          "Introduced Git to the software development teams, largely as a compliment to Subversion and Redmine. My primary job was to develop statistical and geo-referenced data visualization with Web technologies. In doing so I processed multiple GIS data sources using QGIS, GDAL, TopoJSON, GeoJSON, PostGIS piping the output of these to D3 applications. Some other tools I used to build these interactive visualizations in JavaScript were Backbone, JQuery, Underscore, Node.js and Require.js.",
+          "I was contracted by the IPEC ICT department a couple of months after I arrived in Argentina. At that moment I was really focused on the experimentation of both back and front-end Web technologies, Cloud IaaS and NoSQL databases. Particularly interested in Node.js and the ecosystem around it, I took that time to deploy experiment-scale apps on Heroku, Appfog, AWS, DotCloud, PagodaBox, Red Hat OpenShift, RackSpace, Cloud 9 among other PaaS providers just for the fun of it.",
+          "As a part-time worker I found the time and freedom to explore in parallel other stuff of my personal interest. Among them I would mention trends I began to follow on Mobile and Enterprise Software Development, Big Data, Human-Computer Interaction, Design Thinking, Data Analysis and Visualization, Massive Open Online Courses, Web Standards, Programming Languages, Additive Manufacturing, Renewable Energy, Recycling, Logistics, UAVs, Electronics and Embedded Systems, Robotics, AI, NLP, Tech Startups, Cryptocurrencies to cite a few."
+        ],
+        "tools": [
+          "JavaScript",
+          "D3",
+          "Node.js",
+          "Backbone.js",
+          "Underscore.js",
+          "Require.js",
+          "MySQL",
+          "PostgreSQL",
+          "HTML",
+          "CSS",
+          "jQuery",
+          "Linux",
+          "QGIS"
+        ]
+      },
+      {
+        "companyName": "Atos",
+        "role": "TÉCNICO GESTÃO SERVIÇOS I",
+        "location": "Brazil",
+        "start": "2013-05-01",
+        "end": "2013-10-01",
+        "description": [
+          "Provided consulting and technical services inside the ICT department of BR Distribuidora, a subsidiary of the Brazilian oil giant Petrobras responsible for manufacturing, distributing and marketing crude oil sub-products through thousands of contractors nationwide."
+        ],
+        "tools": ["CA Clarity PPM", "Oracle DB", "SAP and IBM software"]
+      }
+    ],
+    "skills": [
+      "Node.js",
+      "Bash",
+      "JavaScript",
+      "JavaScript frameworks",
+      "JavaScript transpilers",
+      "HTML and HTML preprocessors",
+      "CSS and CSS preprocessors",
+      "Vector Illustration (SketchApp/Inkscape)",
+      "Image editing (Photoshop/ GIMP)",
+      "Unix (GNU/Linux,mac OS)",
+      "Package managers (npm, yarn, Bower)",
+      "Task runners (Gulp, Grunt)",
+      "CSS frameworks (Bootstrap)",
+      "Git (GitHub, GitLab)",
+      "TDD (Mocha, Jasmine, Tape)",
+      "Selenium (Protractor/Nightwatch)",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "REST",
+      "Docker",
+      "Vagrant",
+      "Google Analytics",
+      "Adobe Creative Cloud"
+    ],
+    "education": [
+      {
+        "title": "Estadística",
+        "grade": "Ongoing",
+        "institution": "UDELAR",
+        "location": "Uruguay",
+        "start": "2020-01-01",
+        "end": null
+      },
+      {
+        "title": "Profesorado de Matemática",
+        "grade": "Discontinued",
+        "institution": "UNL",
+        "location": "Argentina",
+        "start": "2014-01-01",
+        "end": "2014-01-07"
+      },
+      {
+        "title": "Bacharelado em Matemática",
+        "grade": "Discontinued",
+        "institution": "UFSC",
+        "location": "Brazil",
+        "start": "2012-01-01",
+        "end": "2012-12-01"
+      },
+      {
+        "title": "Bacharelado em Design",
+        "grade": "Discontinued",
+        "institution": "UniverCidade",
+        "location": "Brazil",
+        "start": "2010-01-01",
+        "end": "2010-12-01"
+      },
+      {
+        "title": "Bacharelado em Design",
+        "grade": "Discontinued",
+        "institution": "ESPM Rio",
+        "location": "Brazil",
+        "start": "2007-07-01",
+        "end": "2009-12-01"
+      },
+      {
+        "title": "Bacharelado em Direito",
+        "grade": "Discontinued",
+        "institution": "PUC Rio",
+        "location": "Brazil",
+        "start": "2006-07-01",
+        "end": "2007-07-01"
       }
     ]
-  },
-  "skillsAndQualifications": [
-    "6+ years of experience developing JavaScript applications.",
-    "12+ years of experience in Graphic Design and Visual Communication.",
-    "Comprehends modern computer application architectures and programming patterns.",
-    "Proficient in Web technologies, particularly JavaScript."
-  ],
-  "spokenLanguages": [
-    {
-      "name": "English",
-      "level": "Professional working proficiency"
-    },
-    {
-      "name": "Spanish",
-      "level": "Professional working proficiency"
-    },
-    {
-      "name": "Portuguese",
-      "level": "Native or bilingual proficiency"
-    }
-  ],
-  "skills": [
-    "Node.js",
-    "Bash",
-    "JavaScript",
-    "JavaScript frameworks",
-    "JavaScript transpilers",
-    "HTML and HTML preprocessors",
-    "CSS and CSS preprocessors",
-    "Vector Illustration (SketchApp/Inkscape)",
-    "Image editing (Photoshop/ GIMP)",
-    "Unix (GNU/Linux,mac OS)",
-    "Package managers (npm, yarn, Bower)",
-    "Task runners (Gulp, Grunt)",
-    "CSS frameworks (Bootstrap)",
-    "Git (GitHub, GitLab)",
-    "TDD (Mocha, Jasmine, Tape)",
-    "Selenium (Protractor/Nightwatch)",
-    "MySQL",
-    "PostgreSQL",
-    "MongoDB",
-    "REST",
-    "Docker",
-    "Vagrant",
-    "Google Analytics",
-    "Adobe Creative Cloud"
-  ],
-  "education": [
-    {
-      "title": "Estadística",
-      "grade": "Ongoing",
-      "institution": "UDELAR",
-      "location": "Uruguay",
-      "start": "2020-01-01",
-      "end": null
-    },
-    {
-      "title": "Profesorado de Matemática",
-      "grade": "Discontinued",
-      "institution": "UNL",
-      "location": "Argentina",
-      "start": "2014-01-01",
-      "end": "2014-01-07"
-    },
-    {
-      "title": "Bacharelado em Matemática",
-      "grade": "Discontinued",
-      "institution": "UFSC",
-      "location": "Brazil",
-      "start": "2012-01-01",
-      "end": "2012-12-01"
-    },
-    {
-      "title": "Bacharelado em Design",
-      "grade": "Discontinued",
-      "institution": "UniverCidade",
-      "location": "Brazil",
-      "start": "2010-01-01",
-      "end": "2010-12-01"
-    },
-    {
-      "title": "Bacharelado em Design",
-      "grade": "Discontinued",
-      "institution": "ESPM Rio",
-      "location": "Brazil",
-      "start": "2007-07-01",
-      "end": "2009-12-01"
-    },
-    {
-      "title": "Bacharelado em Direito",
-      "grade": "Discontinued",
-      "institution": "PUC Rio",
-      "location": "Brazil",
-      "start": "2006-07-01",
-      "end": "2007-07-01"
-    }
-  ],
-  "employmentHistory": [
-    {
-      "companyName": "Nearform",
-      "role": "Web Developer",
-      "location": "Remote",
-      "startDate": "2021-02-01",
-      "endDate": null,
-      "description": [
-        "For the first half of the year I worked in a project for an accounting and finance start-up where I had a chance to completely change the way the client had been solving the problem of dynamically generating PDF documents with charts coming out of computed data.The new architecture based on open-source software, greatly simplified the solution and increased its quality, lowering costs and TTM.",
-        "Following that initial engagement, for the first couple of months of Q3 I then moved on to help a big name in the pharma and biotech industries implementing, publishing and maintaining several reusable software packages to an internal private npm registry which brought to life solutions for tasks ranging from user authentication, data auditing, and the persistence and query of digital information. These packages ended up being used by other product focused development squads inside the company and throughout this journey I worked closely with other nearformers in many different circumstances, frequently helping them increase the engaged NearForm team overall delivery quality.",
-        "Towards the final weeks of Q3 and into Q4 until the present moment, I was challenged to step up as the Technical Leader of one of the company product oriented squads which was having difficulties delivering. It has been a unique experience in my career to be the leader of a team made almost entirely by client staff and one where I was able to achieve tremendous success orchestrating and driving the engineering team as well as directly specifying, coding, reviewing and approving several features.",
-        "Working in very close synergy with client staff and other contractors across several disciplines, I was able to secure the production release of a game-changing software solution which is expected to increase the client’s operational efficiency, lower their costs and reduce their environmental footprint.",
-        "Among my daily activities in this role, I highlight pairing and collaborating with several members of the team in many disciplines around technical and non-technical topics helping the client company improve their processes inside and outside the software development discipline."
-      ],
-      "tools": [
-        "Typescript",
-        "Azure DevOps",
-        "Azure Cloud",
-        "Microsoft SQL Server",
-        "Node.js",
-        "npm",
-        "React",
-        "Docker",
-        "Microsoft Teams."
-      ]
-    },
-    {
-      "companyName": "Modus Create",
-      "role": "Web Developer",
-      "location": "Remote",
-      "startDate": "2018-11-01",
-      "endDate": "2021-02-01",
-      "description": [
-        "Throughout the 2019 contract I stayed focused on Back-End development and tooling, my daily tasks went about building and maintaining RESTful APIs and server-side JavaScript SDKs for end users to interact with. I was also co-responsible for a small web based text editor built with React and Material UI on top of Monaco.",
-        "By the time I signed the 2020 contract the 2019 projects entered maintenance mode and I was moved to another team to help build the next generation version of a consumer-facing front-end application. Since then my responsibilities go about building well tested React components with TypeScript, Jest, StoryBook and Cypress.io with occasional back-end work, mostly to extend or add new REST API endpoints."
-      ],
-      "tools": [
-        "Typescript",
-        "PostgreSQL",
-        "Node.js",
-        "npm",
-        "React",
-        "AWS",
-        "Docker",
-        "JIRA",
-        "Slack",
-        "Cucumber (Gherkin)",
-        "Postman (Newman)",
-        "Monaco Editor",
-        "Swagger (OpenAPI 3.0)",
-        "CodeFresh"
-      ]
-    },
-    {
-      "companyName": "Velocity Partners",
-      "role": "Web Developer",
-      "location": "Uruguay",
-      "startDate": "2017-01-01",
-      "endDate": "2018-11-01",
-      "description": [
-        "Here I worked supporting and extending a stateless Node.js application, two AngularJS SPAs and also built from scratch a modern Angular SPA using Typescript. I worked in these projects together with a distributed team of people located in the UK, India, Colombia and the USA. The Node.js application consisted of a back-end responsible for controlling different Unified Communication hardware through plain TCP/IP, SOAP and REST APIs as well as accessing the APIs of multiple calendaring service providers such as Microsoft's EWS under LDAP authentication.",
-        "The SPAs were basically the front-end for different business processes built on top of the core functionality exposed by the Node.js back-end service. Communication between back and front-end happened through WebSockets to execute actions going from retrieving data to be displayed in the browser, to controlling devices such as cameras and microphones. For the time I worked in this project I learned a lot about how Node.js low level networking features work. It was also an opportunity to learn Typescript, RxJS and extend my skill-set."
-      ],
-      "tools": [
-        "Angular.js",
-        "Angular",
-        "Typescript",
-        "JIRA",
-        "Confluence",
-        "GitLab",
-        "Node.js",
-        "npm",
-        "Zeplin.io",
-        "Inkscape",
-        "GIMP",
-        "Socket.io",
-        "RxJS",
-        "Windows 10",
-        "PowerShell"
-      ]
-    },
-    {
-      "companyName": "Huge",
-      "role": "Web Developer",
-      "location": "Brazil",
-      "startDate": "2016-07-01",
-      "endDate": "2016-10-01",
-      "description": [
-        "Joined a remote distributed team of developers from various backgrounds to implement testable and reusable UI components supporting browsers down to IE10 on Windows 7. My primary job was to write stand-alone, pre-parsed code in JADE/PUG, SASS and vanilla JavaScript implementing still mock-ups and design specs using a tricky Grunt and Gulp build architecture provided. In order to add dynamic behavior, it was a requirement to avoid the use of any JS framework on the frontend so I led the development of a custom solution using the Event Emitter pattern to proxy browser events and achieve the flexibility and structure needed to write modular, testable and readable code."
-      ],
-      "tools": [
-        "Require.js",
-        "Jasmine",
-        "npm",
-        "Grunt",
-        "Gulp",
-        "SASS",
-        "JADE/PUG",
-        "GitHub",
-        "Waffle.io"
-      ]
-    },
-    {
-      "companyName": "Altoros Systems",
-      "role": "Web Developer",
-      "location": "Argentina",
-      "startDate": "2015-01-01",
-      "endDate": "2016-02-01",
-      "description": [
-        "Worked designing and developing usable web interfaces and network services for web, mobile and desktop applications contributing to projects for clients like SATO, Cisco, Redwood Logistics, ROI·DNA, Avant, TD Ameritrade and to the development of internal tools such as Hacker Assessor, a talent assessment framework that tech leads in the Santa Fe and Buenos Aires development centers used to assess hires and monitor their performance over time.",
-        "Inside Altoros I found the opportunity to work with bleeding edge technologies such as Firebase, acquired by Google in 2014; MQTT, an M2M communication protocol deployed everywhere in the IoT industry and Node-RED, a flow-based programming tool built on top of Node.js that simplifies the integration of machines, cloud services and web service APIs. Day-to-day, however, my primary tools were Angular and Node.js that I used to build web apps drew on HTTP and WebSockets."
-      ],
-      "tools": [
-        "JavaScript",
-        "Bash",
-        "npm",
-        "Homebrew",
-        "RubyGems",
-        "RVM",
-        "PyPi",
-        "Caskroom",
-        "Vagrant",
-        "Redis",
-        "PostgreSQL",
-        "MongoDB",
-        "Heroku",
-        "AWS",
-        "Pivotal Tracker",
-        "Trello",
-        "Waffle.io",
-        "GitLab",
-        "GitHub",
-        "HipChat",
-        "Slack",
-        "WhatsApp",
-        "Skype",
-        "GSuite",
-        "Lucid Charts",
-        "InVision",
-        "MindMup",
-        "SketchApp"
-      ]
-    },
-    {
-      "companyName": "Gobierno de la Provincia de Santa Fe",
-      "role": "Web Developer",
-      "location": "Argentina",
-      "startDate": "2014-01-01",
-      "endDate": "2014-09-01",
-      "description": [
-        "Introduced Git to the software development teams, largely as a compliment to Subversion and Redmine. My primary job was to develop statistical and geo-referenced data visualization with Web technologies. In doing so I processed multiple GIS data sources using QGIS, GDAL, TopoJSON, GeoJSON, PostGIS piping the output of these to D3 applications. Some other tools I used to build these interactive visualizations in JavaScript were Backbone, JQuery, Underscore, Node.js and Require.js.",
-        "I was contracted by the IPEC ICT department a couple of months after I arrived in Argentina. At that moment I was really focused on the experimentation of both back and front-end Web technologies, Cloud IaaS and NoSQL databases. Particularly interested in Node.js and the ecosystem around it, I took that time to deploy experiment-scale apps on Heroku, Appfog, AWS, DotCloud, PagodaBox, Red Hat OpenShift, RackSpace, Cloud 9 among other PaaS providers just for the fun of it.",
-        "As a part-time worker I found the time and freedom to explore in parallel other stuff of my personal interest. Among them I would mention trends I began to follow on Mobile and Enterprise Software Development, Big Data, Human-Computer Interaction, Design Thinking, Data Analysis and Visualization, Massive Open Online Courses, Web Standards, Programming Languages, Additive Manufacturing, Renewable Energy, Recycling, Logistics, UAVs, Electronics and Embedded Systems, Robotics, AI, NLP, Tech Startups, Cryptocurrencies to cite a few."
-      ],
-      "tools": [
-        "JavaScript",
-        "D3",
-        "Node.js",
-        "Backbone.js",
-        "Underscore.js",
-        "Require.js",
-        "MySQL",
-        "PostgreSQL",
-        "HTML",
-        "CSS",
-        "jQuery",
-        "Linux",
-        "QGIS"
-      ]
-    },
-    {
-      "companyName": "Atos",
-      "role": "TÉCNICO GESTÃO SERVIÇOS I",
-      "location": "Brazil",
-      "startDate": "2013-05-01",
-      "endDate": "2013-10-01",
-      "description": [
-        "Provided consulting and technical services inside the ICT department of BR Distribuidora, a subsidiary of the Brazilian oil giant Petrobras responsible for manufacturing, distributing and marketing crude oil sub-products through thousands of contractors nationwide."
-      ],
-      "tools": [
-        "CA Clarity PPM",
-        "Oracle DB",
-        "SAP and IBM software"
-      ]
-    }
-  ]
+  }
 }
