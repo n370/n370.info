@@ -12,8 +12,6 @@
 
 ### n370.info/
 
-[![Book session on Codementor](https://www.codementor.io/m-badges/n370/get-help.svg)](https://www.codementor.io/@n370?refer=badge)
-
 <br />
 
 A repository for my personal, academic and business info.

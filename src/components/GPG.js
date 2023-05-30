@@ -91,9 +91,9 @@ export default styled(UnstyledGPG)`
   }
 
   button {
-    border-radius: 0.25em;
-    height: 2em;
-    width: 2em;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
     color: #939393;
     border: none;
     background: #353535;
