@@ -34,10 +34,10 @@ const UnstyledAboutPage = ({ className }) => {
           For over 20 years I have dedicated myself to build creative and
           network-connected computing solutions for clients big and small all
           around the world. {"I'm"} passionate about doing it, {"let's"} talk.
-          You can text me on <i>ama at n370.info</i> or in any of the social
+          You can reach me on my e-mail <i>ama at n370.info</i> or any of the social
           channels linked bellow.
         </p>
-        <p>I hope you like what you find here.</p>
+        <p>I hope you find something interesting here.</p>
         <h4>Elsewhere</h4>
         {social.map(({ url, name }) => (
           <>
@@ -73,6 +73,11 @@ export default styled(UnstyledAboutPage)`
 
   .social-link {
     margin-right: 0.5em;
+    white-space: nowrap;
+  }
+
+  i {
+    white-space: nowrap;
   }
 
   @media (min-width: 400px) {
