@@ -80,7 +80,7 @@ export default styled(UnstyledGPG)`
   position: relative;
   padding: 1em;
   margin: 1em 0;
-  background: #1e1e1e;
+  background: var(--secondary-background-color);
 
   .button-wrapper {
     position: absolute;
