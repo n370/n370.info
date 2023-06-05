@@ -2,6 +2,7 @@
   "data": {
     "header": {
       "fullName": "Dylson Valente Neto",
+      "role": "Web Developer",
       "phoneNumber": "+598 0 97066874",
       "emailAddress": "ama at n370.info",
       "fiscalAddress": "Maldonado, Uruguay",
@@ -251,7 +252,7 @@
     ],
     "education": [
       {
-        "title": "Estadística",
+        "title": "Licenciatura en Estadística",
         "grade": "Ongoing",
         "institution": "UDELAR",
         "location": "Uruguay",
