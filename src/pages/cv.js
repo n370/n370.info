@@ -1,17 +1,49 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import React, { useEffect, useState, useRef } from "react";
+import styled, { keyframes } from "styled-components";
 import Layout from "../components/Layout";
-import ExternalLink from "../components/ExternalLink";
 import { format, parse } from "date-fns";
+import { FaSpinner } from "react-icons/fa";
+
+const rotate = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
 
 const formatDate = (date) =>
   format(parse(date, "yyyy-MM-dd", new Date()), "MMM, yyyy");
 
 const UnstyledCVPage = ({ className }) => {
+  const openerRef = useRef();
+
   const [cv, setCV] = useState(null);
 
+  const [isDownloading, setIsDownloading] = useState(false);
+
   const download = async () => {
-    alert("Download!");
+    setIsDownloading(true);
+    try {
+      const res = await fetch(
+        "https://us-central1-n370-166800.cloudfunctions.net/getCV",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ data: cv }),
+        }
+      );
+      const blob = await res.blob();
+      openerRef.current.href = URL.createObjectURL(blob);
+      openerRef.current.click();
+      openerRef.current.href = "noop";
+    } catch (e) {
+      console.error(e);
+    }
+    setIsDownloading(false);
   };
 
   useEffect(() => {
@@ -28,10 +60,27 @@ const UnstyledCVPage = ({ className }) => {
     <Layout>
       {cv && (
         <div className={className}>
-          <div style={{textAlign: "right"}}>
-            <button type="button" onClick={download}>
-              Download PDF
+          <div style={{ textAlign: "right" }}>
+            <button
+              className="download"
+              type="button"
+              disabled={isDownloading}
+              onClick={download}
+            >
+              {"Download"}
+              {isDownloading && <FaSpinner className="spinner" />}
             </button>
+            <a
+              aria-hidden
+              style={{ visibility: "hidden" }}
+              download="dylson-valente-neto.pdf"
+              target="_blank"
+              rel="noopener"
+              ref={openerRef}
+              href="noop"
+            >
+              noop
+            </a>
           </div>
           <div className="section">
             <h4>Skills and Qualifications</h4>
@@ -170,6 +219,15 @@ const UnstyledCVPage = ({ className }) => {
 
 export default styled(UnstyledCVPage)`
   width: 50%;
+
+  .download {
+    cursor: pointer;
+  }
+
+  .spinner {
+    animation: 1s ${rotate} linear infinite;
+    margin-left: 1em;
+  }
 
   .paragraph {
     display: inline-block;
