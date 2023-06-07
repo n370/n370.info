@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import ExternalLink from "../components/ExternalLink";
+import { format, parse } from "date-fns";
+
+const formatDate = (date) =>
+  format(parse(date, "yyyy-MM-dd", new Date()), "MMM, yyyy");
 
 const UnstyledCVPage = ({ className }) => {
   const [cv, setCV] = useState(null);
 
   const download = async () => {
-    alert('Download!')
+    alert("Download!");
   };
 
   useEffect(() => {
@@ -23,80 +28,137 @@ const UnstyledCVPage = ({ className }) => {
     <Layout>
       {cv && (
         <div className={className}>
-          <div>
-            <span>{cv.header.fullName}</span>
-            <span>{cv.header.phoneNumber}</span>
-            <span>{cv.header.emailAddress}</span>
-            <span>{cv.header.fiscalAddress}</span>
-            <span>{cv.header.webpageUrl}</span>
-            <div>
-              {cv.header.socialNetworkProfiles.map((social, i) => (
-                <a key={i} href={social.url}>{social.name}</a>
+          <div style={{textAlign: "right"}}>
+            <button type="button" onClick={download}>
+              Download PDF
+            </button>
+          </div>
+          <div className="section">
+            <h4>Skills and Qualifications</h4>
+            <ul>
+              {cv.skillsAndQualifications.map((skill, i) => (
+                <li key={i}>{skill}</li>
               ))}
-            </div>
-            <div>
-              <button type="button" onClick={download}>Download PDF</button>
-            </div>
+            </ul>
           </div>
-          <div>
-            <h1>Skills and Qualifications</h1>
-            {cv.skillsAndQualifications.map((skill, i) => (
-              <>
-                <span key={i}>{skill}</span>
-                {", "}
-              </>
-            ))}
+          <div className="section">
+            <h4>Spoken Languages</h4>
+            <ul>
+              {cv.spokenLanguages.map((language) => (
+                <li key={language.name}>
+                  {`${language.name} (${language.level})`}
+                </li>
+              ))}
+            </ul>
           </div>
-          <div>
-            <h1>Spoken Languages</h1>
-            {cv.spokenLanguages.map((language) => (
-              <div key={language.name}>
-                <span>{language.name}</span>
-                <span>{language.level}</span>
-              </div>
-            ))}
-          </div>
-          <div>
-            <h1>Employment History</h1>
-            {cv.employmentHistory.map((employer, i) => (
-              <div key={i}>
-                <span>{employer.companyName}</span>
-                <span>{employer.role}</span>
-                <span>{employer.location}</span>
-                <span>{employer.start}</span>
-                <span>{employer.end || "Present"}</span>
+          <div className="section">
+            <h4>Employment History</h4>
+            {cv.employmentHistory.map((employer, index, input) => (
+              <div
+                key={index}
+                style={{
+                  marginTop: index === 0 ? "2em" : 0,
+                  marginBottom: index !== input.length ? "3em" : 0,
+                }}
+              >
+                <div className="row">
+                  <div>
+                    <span>
+                      <strong>{employer.role}</strong>
+                      {`, ${employer.companyName}, ${employer.location}`}
+                    </span>
+                  </div>
+                  <div>
+                    <span>{`${formatDate(employer.start)} — ${
+                      employer.end ? formatDate(employer.end) : "Present"
+                    }`}</span>
+                  </div>
+                </div>
                 <div>
-                  {employer.description.map((paragraph, i) => (
-                    <span key={i}>{paragraph}</span>
+                  {employer.description.map((paragraph, index) => (
+                    <span key={index} className="paragraph">
+                      {paragraph}
+                    </span>
                   ))}
                 </div>
                 <div>
-                  {employer.tools.map((tool, i) => (
-                    <span key={i}>{tool}</span>
-                  ))}
+                  <span className="paragraph">
+                    {employer.tools.reduce((text, tool, index, input) => {
+                      text += tool;
+                      if (index !== input.length - 1) {
+                        text += ", ";
+                      } else {
+                        text += ".";
+                      }
+                      return text;
+                    }, "Technologies used: ")}
+                  </span>
                 </div>
               </div>
             ))}
           </div>
-          <div>
-            <h1>Skills</h1>
-            {cv.skills.map((skill, i) => (
-              <>
-                <span key={i}>{skill}</span>
-                {", "}
-              </>
-            ))}
+          <div className="section">
+            <h4>Skills</h4>
+            <span className="paragraph">
+              {" "}
+              {cv.skills.reduce((text, skill, index, input) => {
+                text += skill;
+                if (index !== input.length - 1) {
+                  text += ", ";
+                } else {
+                  text += ".";
+                }
+                return text;
+              }, "")}
+            </span>
           </div>
-          <div>
-            <h1>Education</h1>
-            {cv.education.map((site) => (
-              <div key={site.title}>
-                <span>{site.title}</span>
-                <span>{site.grade}</span>
-                <span>{site.institution}</span>
-                <span>{site.location}</span>
-                <span>{site.start}</span>
-                <span>{site.end || "Present"}</span>
+          <div className="section">
+            <h4>Education</h4>
+            {cv.education.map((site, index, input) => (
+              <div
+                key={index}
+                className="row"
+                style={{ marginBottom: index !== input.length ? "0.25em" : 0 }}
+              >
+                <div>
+                  <span>
+                    {[
+                      site.title,
+                      site.grade,
+                      site.institution,
+                      site.location,
+                    ].reduce((text, datum, index, input) => {
+                      text += datum;
+                      if (index !== input.length - 1) {
+                        text += ", ";
+                      }
+                      return text;
+                    }, "")}
+                  </span>
+                </div>
+                <div>
+                  <span style={{ display: "inline-block", textAlign: "right" }}>
+                    {formatDate(site.start)}
+                  </span>
+                  <span
+                    style={{
+                      display: "inline-block",
+                      textAlign: "center",
+                      width: "25px",
+                    }}
+                  >
+                    —
+                  </span>
+                  <span
+                    style={{
+                      display: "inline-block",
+                      width: "80px",
+                      textAlign: "left",
+                    }}
+                  >
+                    {site.end ? formatDate(site.end) : "Present"}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
@@ -108,6 +170,27 @@ const UnstyledCVPage = ({ className }) => {
 
 export default styled(UnstyledCVPage)`
   width: 50%;
+
+  .paragraph {
+    display: inline-block;
+    font-family: "PT Serif", serif;
+    font-size: 1em;
+    line-height: 1.35;
+    margin: 0.75em 0;
+  }
+
+  .section {
+    margin: 3em 0;
+  }
+
+  .pipe {
+    margin: 0 0.5em;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
 
   > div {
     margin: 1em 0;
