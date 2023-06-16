@@ -218,8 +218,6 @@ const UnstyledCVPage = ({ className }) => {
 };
 
 export default styled(UnstyledCVPage)`
-  width: 50%;
-
   .download {
     cursor: pointer;
   }
@@ -252,5 +250,9 @@ export default styled(UnstyledCVPage)`
 
   > div {
     margin: 1em 0;
+  }
+
+  @media (min-width: 400px) {
+    width: 50%;
   }
 `;
