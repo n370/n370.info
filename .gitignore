@@ -71,3 +71,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# System
+.DS_Store
