@@ -1,33 +1,90 @@
-import React from "react";
-import PostList from "../components/PostList";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import { graphql } from "gatsby";
+import ExternalLink from "../components/ExternalLink";
+import GPG from "../components/GPG";
+import styled from "styled-components";
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <PostList postList={data.allMdx.edges} />
-  </Layout>
-);
+const UnstyledAboutPage = ({ className }) => {
+  const [social, setSocial] = useState([]);
 
-export default IndexPage;
+  useEffect(() => {
+    run();
 
-export const query = graphql`
-  query IndexQuery {
-    allMdx(sort: { frontmatter: { Date: DESC } }) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            Title
-            Date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
+    async function run() {
+      const res = await fetch("/data/social.json");
+      const body = await res.json();
+      setSocial(body.data);
+    }
+  }, []);
+
+  return (
+    <Layout>
+      <div className={className}>
+        <img
+          className="profile-image"
+          src="/images/pages/about/profile.jpeg"
+          alt="Dylson Valente Neto"
+        />
+        <h3>Hi there! welcome to my website.</h3>
+        <p>
+          My name is Dylson, also known on the Internet as |\|370, n370 or
+          n370n370.
+        </p>
+        <p>
+          For over 20 years I have dedicated myself to build creative and
+          network-connected computing solutions for clients big and small all
+          around the world. {"I'm"} passionate about it, {"let's"} talk.
+          You can reach me on my e-mail <i>ama at n370.info</i> or any of the social
+          channels linked bellow.
+        </p>
+        <p>I hope you find something interesting here.</p>
+        <h4>Elsewhere</h4>
+        {social.map(({ url, name }) => (
+          <>
+            <ExternalLink
+              className="social-link"
+              key={name}
+              alt={name}
+              href={url}
+            >
+              {name}
+            </ExternalLink>{" "}
+          </>
+        ))}
+        <div className="gpg">
+          <h4>GPG Key</h4>
+          <GPG />
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default styled(UnstyledAboutPage)`
+  .gpg {
+    margin-top: 3em;
+  }
+
+  .profile-image {
+    width: 100%;
+    border-radius: 2px;
+    filter: contrast(90%) brightness(90%);
+  }
+
+  .social-link {
+    margin-right: 0.5em;
+    white-space: nowrap;
+  }
+
+  i {
+    white-space: nowrap;
+  }
+
+  @media (min-width: 400px) {
+    width: 50%;
+
+    .profile-image {
+      width: 200px;
     }
   }
 `;

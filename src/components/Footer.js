@@ -14,7 +14,10 @@ const UnstyledFooter = ({ className, siteMetadata }) => (
       <Link href="/cv">
         <small><em>Curriculum Vitae</em></small>
       </Link>
-      <Link href="/about">
+      <Link href="/blog">
+        <small>Blog</small>
+      </Link>
+      <Link href="/">
         <small>About me</small>
       </Link>
       <Link href="/colophon">
