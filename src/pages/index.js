@@ -31,7 +31,7 @@ const UnstyledAboutPage = ({ className }) => {
           n370n370.
         </p>
         <p>
-          For over 20 years I have dedicated myself to build creative and
+          For over 10 years I have dedicated myself to build creative and
           network-connected computing solutions for clients big and small all
           around the world. {"I'm"} passionate about it, {"let's"} talk.
           You can reach me on my e-mail <i>ama at n370.info</i> or any of the social
