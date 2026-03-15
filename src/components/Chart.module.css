@@ -1,0 +1,11 @@
+.main {
+  margin: 5em 0;
+}
+
+.main figure {
+  margin: 0;
+}
+
+.main figcaption {
+  margin-top: 30px;
+}

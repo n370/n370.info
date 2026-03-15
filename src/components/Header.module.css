@@ -1,0 +1,10 @@
+.main {
+  height: var(--header-height);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}

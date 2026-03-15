@@ -1,0 +1,50 @@
+.main {
+  width: 100%;
+  padding: 5em 0 2.5em 0;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main a {
+  margin: 1em 0 0 0;
+  display: block;
+}
+
+.main em {
+  font-style: normal;
+  font-weight: 300;
+}
+
+.main small {
+  font-size: 14px;
+}
+
+.info,
+.links {
+  width: 100%;
+  margin: 2em 0;
+}
+
+@media (min-width: 400px) {
+  .main {
+    padding: 10em 0 5em 0;
+    flex-direction: row;
+  }
+
+  .main a {
+    margin: 0 1em 0 0;
+    display: unset;
+  }
+
+  .main small {
+    font-size: unset;
+  }
+
+  .info,
+  .links {
+    width: unset;
+    margin: unset;
+  }
+}

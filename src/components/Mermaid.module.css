@@ -1,0 +1,7 @@
+.main {
+  display: flex;
+  justify-content: center;
+  background: var(--secondary-background-color);
+  padding: 1em 0.5em;
+  border-radius: calc(13px * 0.2);
+}

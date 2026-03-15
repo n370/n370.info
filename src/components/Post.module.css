@@ -1,0 +1,51 @@
+.main {
+  padding: 0 5%;
+}
+
+.main img {
+  width: 100%;
+}
+
+.pagination {
+  margin: 10em 0;
+
+  display: flex;
+
+  > * {
+    flex-basis: 50%;
+  }
+
+  > *:first-child {
+    padding: 0 10% 0 0;
+  }
+
+  > *:last-child {
+    padding: 0 0 0 10%;
+    text-align: right;
+  }
+}
+
+.main .math {
+  margin: 5em 0;
+}
+
+.main .katex {
+  font-size: 1.8em;
+}
+
+.content {
+  font-family: var(--font-serif);
+
+  pre {
+    border-radius: 0.25rem;
+    overflow-x: scroll;
+    padding: 1rem; /* Adjust the value as needed */
+    /* Other styling like margin, border-radius, etc. can also be added here */
+  }
+}
+
+@media (min-width: 720px) {
+  .main {
+    padding: 0 25%;
+  }
+}

@@ -1,0 +1,48 @@
+.download {
+  cursor: pointer;
+}
+
+.spinner {
+  animation: 1s rotate linear infinite;
+  margin-left: 1em;
+}
+
+.paragraph {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 1em;
+  line-height: 1.35;
+  margin: 0.75em 0;
+}
+
+.section {
+  margin: 3em 0;
+}
+
+.pipe {
+  margin: 0 0.5em;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main > div {
+  margin: 1em 0;
+}
+
+@media (min-width: 400px) {
+  .main {
+    width: 50%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

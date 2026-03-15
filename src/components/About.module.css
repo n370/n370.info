@@ -1,0 +1,35 @@
+.main {
+  p {
+    font-family: var(--font-serif);
+  }
+}
+
+.gpg {
+  margin-top: 3em;
+}
+
+.profile-image {
+  border-radius: 0.25rem;
+  width: 100px;
+  height: auto;
+}
+
+.social-link {
+  margin-right: 0.5em;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.main i {
+  white-space: nowrap;
+}
+
+@media (min-width: 400px) {
+  .main {
+    width: 50%;
+  }
+
+  .profile-image {
+    width: 200px;
+  }
+}

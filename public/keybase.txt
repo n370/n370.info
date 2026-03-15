@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/n370
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://n370.info
+  * I am n370 (https://keybase.io/n370) on keybase.
+  * I have a public key ASBQtonCIoTE-MyrkBHEL9ZuafWEjmFR-1XJna0w3Y65ZQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01011a29447e443645a1bbec17bafdf127302bc08b00b6927e3834bf81e949ef815d0a",
+      "host": "keybase.io",
+      "kid": "012050b689c22284c4f8ccab9011c42fd66e69f5848e6151fb55c99dad30dd8eb9650a",
+      "uid": "0684e8c577df62b43498b714d4060f00",
+      "username": "n370"
+    },
+    "merkle_root": {
+      "ctime": 1606782577,
+      "hash": "f988f45e2ed03302cc2842b8bbdd2d74b0ee34e88ee0613dad51424486df17ad355c8e285e8637c777c7d82e843c3c896509879875c7640e8156df8d315bc090",
+      "hash_meta": "4a07fbde11b29105ae21544d3cc11455131eb913cba7124b2fef6dc73dd191f7",
+      "seqno": 18271376
+    },
+    "service": {
+      "entropy": "g7yKMsqRBshk8zBdCPEdC9ls",
+      "hostname": "n370.info",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1606782637,
+  "expire_in": 504576000,
+  "prev": "136d0d70f46c059aceb9d49ab0cdff8e4a2dce4286280574744574d723d384a1",
+  "seqno": 40,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgULaJwiKExPjMq5ARxC/Wbmn1hI5hUftVyZ2tMN2OuWUKp3BheWxvYWTESpcCKMQgE20NcPRsBZrOudSasM3/jkotzkKGKAV0dEV01yPThKHEIIemFATX480lPhad2I1+fBi2mO9qYgHRyNJPsN+bwg00AgHCo3NpZ8RApEH0tPH7WcAF7p5BgKdoCwyT8QUAsDN539jmoYkliSKKVWb22Wz8DpM7A3US+aGiBfA03tvXlTdYGkL+uponCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJMe575yd66jBEG+YuEQWJ3ATwvRyCRGEr7V4VSVmvBuo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/n370
+
+==================================================================

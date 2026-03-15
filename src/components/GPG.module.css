@@ -1,0 +1,37 @@
+.main {
+  position: relative;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.button-wrapper {
+  position: absolute;
+  left: 0;
+  right: 1em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main button {
+  border-radius: 3px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.main button:hover {
+}
+
+.key {
+  font-size: 8px;
+  font-family: monospace;
+  color: inherit;
+  white-space: pre-wrap;
+}
+
+@media (min-width: 400px) {
+  .key {
+    font-size: unset;
+  }
+}
