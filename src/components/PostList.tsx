@@ -4,7 +4,7 @@ import styles from "./PostList.module.css";
 
 export const PostList: FC<any> = ({ posts }) => (
   <div className={styles.main}>
-    {posts.map(({ metadata, path }: any) => {
+    {posts.reverse().map(({ metadata, path }: any) => {
       return (
         <Link className={styles.link} href={`blog/${path}`} key={path}>
           <span className={styles.date}>{metadata.Date}</span>
