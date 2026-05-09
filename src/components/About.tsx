@@ -32,7 +32,7 @@ export const About = ({}) => {
         Hello there! welcome to my website. {"I'm"} glad {"you're"} here.
       </h3>
       <p>
-        For over 20 years I have used the Internet as medium to build value for
+        For over 20 years I have used the Internet as a medium to build value for
         individuals and organizations all over the world. This site is an entrypoint
         to that work.
       </p>
@@ -40,7 +40,7 @@ export const About = ({}) => {
         If you want to say hi, please send an email to <i>ama at n370.info</i>.
       </p>
       <p>
-        {"Your's"} truly,
+        Yours truly,
         <br />
         <br />
         Dylson.
