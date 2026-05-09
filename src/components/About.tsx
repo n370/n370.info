@@ -1,10 +1,9 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from 'next/image'
+import Image from "next/image";
 import { ExternalLink } from "./ExternalLink";
-import { GPG } from "./GPG";
+// import { GPG } from "./GPG";
 import styles from "./About.module.css";
 
 export const About = ({}) => {
@@ -29,36 +28,42 @@ export const About = ({}) => {
         src="/images/pages/about/profile.jpeg"
         alt="Dylson Valente Neto"
       />
-      <h3>Hi there! welcome to my website.</h3>
+      <h3>
+        Hello there! welcome to my website. {"I'm"} glad {"you're"} here.
+      </h3>
       <p>
-        My name is Dylson, also known on the Internet as |\|370, n370 or
-        n370n370.
+        For over 20 years I have used the Internet as medium to build value for
+        individuals and organizations all over the world. This site is an entrypoint
+        to that work.
       </p>
       <p>
-        For over 10 years I have dedicated myself to build creative and
-        network-connected computing solutions for clients big and small all
-        around the world. {"I'm"} passionate about it, {"let's"} talk. You can
-        reach me on my e-mail <i>ama at n370.info</i> or any of the social
-        channels linked bellow.
+        If you want to say hi, please send an email to <i>ama at n370.info</i>.
       </p>
-      <p>I hope you find something interesting here.</p>
+      <p>
+        {"Your's"} truly,
+        <br />
+        <br />
+        Dylson.
+      </p>
       <h4>Elsewhere</h4>
       <div>
-        {social.map(({ url, name }) => (
-          <ExternalLink
-            className={styles["social-link"]}
-            key={name}
-            alt={name}
-            href={url}
-          >
-            {name}
-          </ExternalLink>
-        ))}{" "}
+        {social
+          .filter(({ visibility }) => visibility === "public")
+          .map(({ url, name }) => (
+            <ExternalLink
+              className={styles["social-link"]}
+              key={name}
+              alt={name}
+              href={url}
+            >
+              {name}
+            </ExternalLink>
+          ))}{" "}
       </div>
-      <div className={styles.gpg}>
+      {/* <div className={styles.gpg}>
         <h4>GPG Key</h4>
         <GPG />
-      </div>
+      </div> */}
     </div>
   );
 };
