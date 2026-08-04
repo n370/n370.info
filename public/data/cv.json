@@ -261,11 +261,11 @@
     "education": [
       {
         "title": "Licenciatura en Estadística",
-        "grade": "Ongoing",
+        "grade": "Discontinued",
         "institution": "UDELAR",
         "location": "Uruguay",
         "start": "2020-01-01",
-        "end": null
+        "end": "2020-01-01"
       },
       {
         "title": "Profesorado de Matemática",
